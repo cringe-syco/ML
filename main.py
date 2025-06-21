@@ -18,6 +18,11 @@ import matplotlib.pyplot as plt
 # TODO: Model training
 # ...
 
+# If you want to use uv for faster package management, install it with:
+# pip install uv
+# Then, use 'uv pip install -r requirements.txt' to install dependencies much faster.
+# For more info: https://github.com/astral-sh/uv
+
 # TODO: Model evaluation
 # ...
 
