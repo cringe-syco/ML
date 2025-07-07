@@ -1,0 +1,159 @@
+/* style.css */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #f8fafc 0%, #e0e7ef 100%);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+h1 {
+    margin-top: 40px;
+    color: #2d3748;
+    letter-spacing: 2px;
+    font-size: 2.5em;
+}
+#game-container {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 32px 24px 24px 24px;
+    margin-top: 32px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+#main-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#status {
+    margin: 16px 0 24px 0;
+    font-size: 1.3em;
+    color: #4a5568;
+    min-height: 1.5em;
+}
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(3, 80px);
+    gap: 10px;
+    margin-bottom: 24px;
+}
+.cell {
+    width: 80px;
+    height: 80px;
+    background: #f1f5f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    font-size: 2.5em;
+    color: #2b6cb0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    border: 2px solid #cbd5e1;
+    user-select: none;
+}
+.cell:hover {
+    background: #e2e8f0;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+.cell.filled {
+    color: #1a202c;
+    cursor: default;
+    background: #e2e8f0;
+}
+#reset {
+    background: #4299e1;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 28px;
+    font-size: 1.1em;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(66,153,225,0.08);
+    transition: background 0.2s;
+}
+#reset:hover {
+    background: #2b6cb0;
+}
+/* Probability Panel Styling - Single Bar, Below Game */
+#probability-panel {
+    margin: 36px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 180px;
+    background: #f8fafc;
+    border-radius: 16px;
+    box-shadow: 0 6px 32px 0 rgba(66,153,225,0.10), 0 1.5px 8px 0 rgba(66,153,225,0.08);
+    padding: 22px 32px 22px 32px;
+    max-width: 340px;
+}
+/* Probability Panel Styling */
+.prob-label {
+    font-size: 1.18em;
+    color: #020f08;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    text-shadow: 0 1px 2px #fff;
+}
+.prob-bar.single {
+    width: 220px;
+    height: 28px;
+    background: linear-gradient(90deg, #e2e8f0 60%, #cbd5e1 100%);
+    border-radius: 16px;
+    margin-bottom: 0;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 2px 12px 0 #38a16933, 0 1.5px 8px 0 #f5656533;
+}
+.prob-bar.single .prob-fill-o {
+    background: linear-gradient(90deg, #bfd5ca 60%, #e0e7e3 100%);
+    height: 100%;
+    border-radius: 16px 0 0 16px;
+    transition: width 0.4s cubic-bezier(.4,2,.6,1);
+    box-shadow: 0 1px 8px #38a16955;
+    z-index: 1;
+}
+.prob-bar.single::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0; top: 0; height: 100%;
+    width: 100%;
+    border-radius: 0 16px 16px 0;
+    z-index: 0;
+    pointer-events: none;
+    transition: width 0.4s cubic-bezier(.4,2,.6,1);
+}
+.prob-value {
+    position: absolute;
+    top: 0; left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.18em;
+    color: #000000;
+    font-weight: 800;
+    text-shadow: 0 1px 2px #fff;
+    letter-spacing: 0.5px;
+    line-height: 28px;
+    z-index: 2;
+}
+@media (max-width: 900px) {
+    #game-container { flex-direction: column; align-items: center; }
+    #probability-panel { margin: 24px auto 0 auto; }
+}
+@media (max-width: 600px) {
+    #game-container { padding: 12px 2vw; }
+    #board { grid-template-columns: repeat(3, 22vw); grid-template-rows: repeat(3, 22vw); }
+    .cell { width: 22vw; height: 22vw; font-size: 2em; }
+    #probability-panel { min-width: 120px; padding: 10px 8px; }
+    .prob-bar.single { width: 80vw; min-width: 60px; max-width: 98vw; }
+}

@@ -1,0 +1,24 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <title>Tic-Tac-Toe Offline</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Tic-Tac-Toe Offline</h1>
+    <div id="game-container">
+        <div id="main-area">
+            <div id="status">Player X's turn</div>
+            <div id="board"></div>
+            <button id="reset">Reset</button>
+        </div>
+    </div>
+    <div id="probability-panel">
+        <div class="prob-label">O Win Probability</div>
+        <div class="prob-bar single"><div id="prob-o" class="prob-fill-o" style="width: 50%"></div><span id="prob-o-val" class="prob-value">50%</span></div>
+    </div>
+    <script src="/static/ui.js"></script>
+</body>
+</html>
