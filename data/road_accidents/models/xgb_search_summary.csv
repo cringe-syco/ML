@@ -1,0 +1,2 @@
+model,best_score,best_params,test_r2,test_rmse
+xgb,0.8862736918521904,"{'xgb__subsample': 1.0, 'xgb__n_estimators': 100, 'xgb__max_depth': 7, 'xgb__learning_rate': 0.1, 'xgb__colsample_bytree': 1.0}",0.8854180094743975,0.056248201585559085
