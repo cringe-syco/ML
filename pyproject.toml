@@ -49,6 +49,7 @@ dependencies = [
     "httpcore==1.0.9",
     "httpx==0.28.1",
     "idna==3.10",
+    "imblearn>=0.0",
     "ipykernel==6.29.5",
     "ipython==9.3.0",
     "ipython-pygments-lexers==1.1.1",
