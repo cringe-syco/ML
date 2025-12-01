@@ -1,0 +1,1447 @@
+========================= EXPERIMENT LOG =========================
+Timestamp: 2025-11-30 15:08:15
+
+ROC AUC Score: 0.91859
+
+Model Parameters:
+    boosting_type: gbdt
+    class_weight: None
+    colsample_bytree: 1.0
+    importance_type: split
+    learning_rate: 0.05
+    max_depth: -1
+    min_child_samples: 20
+    min_child_weight: 0.001
+    min_split_gain: 0.0
+    n_estimators: 500
+    n_jobs: None
+    num_leaves: 31
+    objective: binary
+    random_state: None
+    reg_alpha: 0.0
+    reg_lambda: 0.0
+    subsample: 1.0
+    subsample_for_bin: 200000
+    subsample_freq: 0
+    eval_metric: auc
+    verbose: -1
+    min_data_in_leaf: 20
+    lambda_l1: 0.0
+    lambda_l2: 0.0
+    min_gain_to_split: 0.0
+    feature_fraction: 0.9
+    bagging_fraction: 0.8
+    bagging_freq: 5
+    scale_pos_weight: 0.35
+
+Features Used (23):
+    annual_income, debt_to_income_ratio, credit_score, loan_amount, interest_rate, gender, marital_status, education_level, employment_status, loan_purpose, grade_subgrade, grade_num, grade_num_dti, grade_dti_loan, gr_ln_dti_ir_cs, grade_purpose, dti_per_k, income_stress, income_stress_adj, interest_per_k, interest_income_ratio, affordability, log_income_loan_dti
+
+Feature Importances:
+    annual_income: 895.0
+    debt_to_income_ratio: 2136.0
+    credit_score: 1327.0
+    loan_amount: 807.0
+    interest_rate: 683.0
+    gender: 68.0
+    marital_status: 33.0
+    education_level: 97.0
+    employment_status: 479.0
+    loan_purpose: 6.0
+    grade_subgrade: 64.0
+    grade_num: 79.0
+    grade_num_dti: 566.0
+    grade_dti_loan: 416.0
+    gr_ln_dti_ir_cs: 559.0
+    grade_purpose: 3675.0
+    dti_per_k: 510.0
+    income_stress: 439.0
+    income_stress_adj: 279.0
+    interest_per_k: 483.0
+    interest_income_ratio: 611.0
+    affordability: 290.0
+    log_income_loan_dti: 498.0
+
+ROC-AUC Score: 0.9185942912928713
+
+=== 5-Fold Cross-Validation Classification Report (Averaged) ===
+
+Class      Precision    Recall  F1-Score   Support
+--------------------------------------------------
+0.0             0.70      0.75      0.72     23900
+1.0             0.94      0.92      0.93     94898
+macro avg       0.82      0.83      0.83    118798
+weighted avg      0.89      0.89      0.89    118798
+
+=== Average Confusion Matrix (over CV folds) ===
+                   0         1
+------------------------------
+0              89433     30067
+1              38221    436273
+
+Notes:
+    base features with base params
+
+-------------------------------------------------------
+========================= EXPERIMENT LOG =========================
+Timestamp: 2025-11-30 15:41:54
+
+ROC AUC Score: 0.91838
+
+Model Parameters:
+    boosting_type: gbdt
+    class_weight: None
+    colsample_bytree: 1.0
+    importance_type: split
+    learning_rate: 0.05
+    max_depth: -1
+    min_child_samples: 20
+    min_child_weight: 0.001
+    min_split_gain: 0.0
+    n_estimators: 500
+    n_jobs: None
+    num_leaves: 31
+    objective: binary
+    random_state: None
+    reg_alpha: 0.0
+    reg_lambda: 0.0
+    subsample: 1.0
+    subsample_for_bin: 200000
+    subsample_freq: 0
+    eval_metric: auc
+    verbose: -1
+    min_data_in_leaf: 20
+    lambda_l1: 0.0
+    lambda_l2: 0.0
+    min_gain_to_split: 0.0
+    feature_fraction: 0.9
+    bagging_fraction: 0.8
+    bagging_freq: 5
+    is_unbalance: True
+
+Features Used (23):
+    annual_income, debt_to_income_ratio, credit_score, loan_amount, interest_rate, gender, marital_status, education_level, employment_status, loan_purpose, grade_subgrade, grade_num, grade_num_dti, grade_dti_loan, gr_ln_dti_ir_cs, grade_purpose, dti_per_k, income_stress, income_stress_adj, interest_per_k, interest_income_ratio, affordability, log_income_loan_dti
+
+Feature Importances:
+    annual_income: 846.0
+    debt_to_income_ratio: 2029.0
+    credit_score: 1207.0
+    loan_amount: 694.0
+    interest_rate: 576.0
+    gender: 70.0
+    marital_status: 42.0
+    education_level: 113.0
+    employment_status: 501.0
+    loan_purpose: 9.0
+    grade_subgrade: 117.0
+    grade_num: 54.0
+    grade_num_dti: 526.0
+    grade_dti_loan: 400.0
+    gr_ln_dti_ir_cs: 576.0
+    grade_purpose: 4387.0
+    dti_per_k: 489.0
+    income_stress: 413.0
+    income_stress_adj: 335.0
+    interest_per_k: 428.0
+    interest_income_ratio: 535.0
+    affordability: 207.0
+    log_income_loan_dti: 446.0
+
+ROC-AUC Score: 0.9183784332212568
+
+=== 5-Fold Cross-Validation Classification Report (Averaged) ===
+
+Class      Precision    Recall  F1-Score   Support
+--------------------------------------------------
+0.0             0.64      0.79      0.70     23900
+1.0             0.94      0.89      0.91     94898
+macro avg       0.79      0.84      0.81    118798
+weighted avg      0.88      0.87      0.87    118798
+
+=== Average Confusion Matrix (over CV folds) ===
+                   0         1
+------------------------------
+0              93990     25510
+1              53657    420837
+
+Notes:
+    is_unbalnce set to true . let model decide
+
+-------------------------------------------------------
+========================= EXPERIMENT LOG =========================
+Timestamp: 2025-11-30 15:45:56
+
+ROC AUC Score: 0.91838
+
+Model Parameters:
+    boosting_type: gbdt
+    class_weight: None
+    colsample_bytree: 1.0
+    importance_type: split
+    learning_rate: 0.05
+    max_depth: -1
+    min_child_samples: 20
+    min_child_weight: 0.001
+    min_split_gain: 0.0
+    n_estimators: 500
+    n_jobs: None
+    num_leaves: 31
+    objective: binary
+    random_state: None
+    reg_alpha: 0.0
+    reg_lambda: 0.0
+    subsample: 1.0
+    subsample_for_bin: 200000
+    subsample_freq: 0
+    eval_metric: auc
+    verbose: -1
+    min_data_in_leaf: 20
+    lambda_l1: 0.0
+    lambda_l2: 0.0
+    min_gain_to_split: 0.0
+    feature_fraction: 0.9
+    bagging_fraction: 0.8
+    bagging_freq: 5
+    is_unbalance: True
+
+Features Used (23):
+    annual_income, debt_to_income_ratio, credit_score, loan_amount, interest_rate, gender, marital_status, education_level, employment_status, loan_purpose, grade_subgrade, grade_num, grade_num_dti, grade_dti_loan, gr_ln_dti_ir_cs, grade_purpose, dti_per_k, income_stress, income_stress_adj, interest_per_k, interest_income_ratio, affordability, log_income_loan_dti
+
+Feature Importances:
+    annual_income: 846.0
+    debt_to_income_ratio: 2029.0
+    credit_score: 1207.0
+    loan_amount: 694.0
+    interest_rate: 576.0
+    gender: 70.0
+    marital_status: 42.0
+    education_level: 113.0
+    employment_status: 501.0
+    loan_purpose: 9.0
+    grade_subgrade: 117.0
+    grade_num: 54.0
+    grade_num_dti: 526.0
+    grade_dti_loan: 400.0
+    gr_ln_dti_ir_cs: 576.0
+    grade_purpose: 4387.0
+    dti_per_k: 489.0
+    income_stress: 413.0
+    income_stress_adj: 335.0
+    interest_per_k: 428.0
+    interest_income_ratio: 535.0
+    affordability: 207.0
+    log_income_loan_dti: 446.0
+
+ROC-AUC Score: 0.9183784332212568
+
+=== 5-Fold Cross-Validation Classification Report (Averaged) ===
+
+Class      Precision    Recall  F1-Score   Support
+--------------------------------------------------
+0.0             0.64      0.79      0.70     23900
+1.0             0.94      0.89      0.91     94898
+macro avg       0.79      0.84      0.81    118798
+weighted avg      0.88      0.87      0.87    118798
+
+=== Average Confusion Matrix (over CV folds) ===
+                   0         1
+------------------------------
+0              93990     25510
+1              53657    420837
+
+Notes:
+    Set scale pos weight to 1.25
+
+-------------------------------------------------------
+========================= EXPERIMENT LOG =========================
+Timestamp: 2025-11-30 16:17:34
+
+ROC AUC Score: 0.91881
+
+Model Parameters:
+    boosting_type: gbdt
+    class_weight: None
+    colsample_bytree: 1.0
+    importance_type: split
+    learning_rate: 0.05
+    max_depth: -1
+    min_child_samples: 20
+    min_child_weight: 0.001
+    min_split_gain: 0.0
+    n_estimators: 500
+    n_jobs: None
+    num_leaves: 31
+    objective: binary
+    random_state: None
+    reg_alpha: 0.0
+    reg_lambda: 0.0
+    subsample: 1.0
+    subsample_for_bin: 200000
+    subsample_freq: 0
+    eval_metric: auc
+    verbose: -1
+    min_data_in_leaf: 20
+    lambda_l1: 0.0
+    lambda_l2: 0.0
+    min_gain_to_split: 0.0
+    feature_fraction: 0.9
+    bagging_fraction: 0.8
+    bagging_freq: 5
+    is_unbalance: True
+
+Features Used (17):
+    annual_income, debt_to_income_ratio, credit_score, loan_amount, interest_rate, gender, marital_status, education_level, employment_status, loan_purpose, grade_subgrade, grade_num, grade_num_dti, grade_dti_loan, gr_ln_dti_ir_cs, grade_purpose, log_income_loan_dti
+
+Feature Importances:
+    annual_income: 1198.0
+    debt_to_income_ratio: 2399.0
+    credit_score: 1325.0
+    loan_amount: 1171.0
+    interest_rate: 1023.0
+    gender: 100.0
+    marital_status: 68.0
+    education_level: 130.0
+    employment_status: 492.0
+    loan_purpose: 23.0
+    grade_subgrade: 228.0
+    grade_num: 65.0
+    grade_num_dti: 670.0
+    grade_dti_loan: 509.0
+    gr_ln_dti_ir_cs: 708.0
+    grade_purpose: 4229.0
+    log_income_loan_dti: 662.0
+
+ROC-AUC Score: 0.9188146417254563
+
+=== 5-Fold Cross-Validation Classification Report (Averaged) ===
+
+Class      Precision    Recall  F1-Score   Support
+--------------------------------------------------
+0.0             0.64      0.79      0.70     23900
+1.0             0.94      0.89      0.91     94898
+macro avg       0.79      0.84      0.81    118798
+weighted avg      0.88      0.87      0.87    118798
+
+=== Average Confusion Matrix (over CV folds) ===
+                   0         1
+------------------------------
+0              94064     25436
+1              53838    420656
+
+Notes:
+    Set scale pos weight to 1.25
+
+-------------------------------------------------------
+========================= EXPERIMENT LOG =========================
+Timestamp: 2025-11-30 16:20:28
+
+ROC AUC Score: 0.91899
+
+Model Parameters:
+    boosting_type: gbdt
+    class_weight: None
+    colsample_bytree: 1.0
+    importance_type: split
+    learning_rate: 0.05
+    max_depth: -1
+    min_child_samples: 20
+    min_child_weight: 0.001
+    min_split_gain: 0.0
+    n_estimators: 500
+    n_jobs: None
+    num_leaves: 31
+    objective: binary
+    random_state: None
+    reg_alpha: 0.0
+    reg_lambda: 0.0
+    subsample: 1.0
+    subsample_for_bin: 200000
+    subsample_freq: 0
+    eval_metric: auc
+    verbose: -1
+    min_data_in_leaf: 20
+    lambda_l1: 0.0
+    lambda_l2: 0.0
+    min_gain_to_split: 0.0
+    feature_fraction: 0.9
+    bagging_fraction: 0.8
+    bagging_freq: 5
+    scale_pos_weight: 0.37
+
+Features Used (17):
+    annual_income, debt_to_income_ratio, credit_score, loan_amount, interest_rate, gender, marital_status, education_level, employment_status, loan_purpose, grade_subgrade, grade_num, grade_num_dti, grade_dti_loan, gr_ln_dti_ir_cs, grade_purpose, log_income_loan_dti
+
+Feature Importances:
+    annual_income: 1284.0
+    debt_to_income_ratio: 2500.0
+    credit_score: 1501.0
+    loan_amount: 1309.0
+    interest_rate: 1155.0
+    gender: 115.0
+    marital_status: 33.0
+    education_level: 107.0
+    employment_status: 490.0
+    loan_purpose: 9.0
+    grade_subgrade: 151.0
+    grade_num: 102.0
+    grade_num_dti: 668.0
+    grade_dti_loan: 560.0
+    gr_ln_dti_ir_cs: 715.0
+    grade_purpose: 3577.0
+    log_income_loan_dti: 724.0
+
+ROC-AUC Score: 0.9189920074117978
+
+=== 5-Fold Cross-Validation Classification Report (Averaged) ===
+
+Class      Precision    Recall  F1-Score   Support
+--------------------------------------------------
+0.0             0.71      0.74      0.73     23900
+1.0             0.93      0.92      0.93     94898
+macro avg       0.82      0.83      0.83    118798
+weighted avg      0.89      0.89      0.89    118798
+
+=== Average Confusion Matrix (over CV folds) ===
+                   0         1
+------------------------------
+0              88708     30792
+1              36127    438367
+
+Notes:
+    Set scale pos weight to 0.37
+
+-------------------------------------------------------
+========================= EXPERIMENT LOG =========================
+Timestamp: 2025-11-30 16:30:19
+
+ROC AUC Score: 0.91905
+
+Model Parameters:
+    boosting_type: gbdt
+    class_weight: None
+    colsample_bytree: 1.0
+    importance_type: split
+    learning_rate: 0.05
+    max_depth: -1
+    min_child_samples: 20
+    min_child_weight: 0.001
+    min_split_gain: 0.0
+    n_estimators: 500
+    n_jobs: None
+    num_leaves: 31
+    objective: binary
+    random_state: None
+    reg_alpha: 0.0
+    reg_lambda: 0.0
+    subsample: 1.0
+    subsample_for_bin: 200000
+    subsample_freq: 0
+    eval_metric: auc
+    verbose: -1
+    min_data_in_leaf: 20
+    lambda_l1: 0.0
+    lambda_l2: 0.0
+    min_gain_to_split: 0.0
+    feature_fraction: 0.9
+    bagging_fraction: 0.8
+    bagging_freq: 5
+    scale_pos_weight: 0.26
+
+Features Used (17):
+    annual_income, debt_to_income_ratio, credit_score, loan_amount, interest_rate, gender, marital_status, education_level, employment_status, loan_purpose, grade_subgrade, grade_num, grade_num_dti, grade_dti_loan, gr_ln_dti_ir_cs, grade_purpose, log_income_loan_dti
+
+Feature Importances:
+    annual_income: 1331.0
+    debt_to_income_ratio: 2527.0
+    credit_score: 1505.0
+    loan_amount: 1313.0
+    interest_rate: 1078.0
+    gender: 96.0
+    marital_status: 23.0
+    education_level: 104.0
+    employment_status: 473.0
+    loan_purpose: 4.0
+    grade_subgrade: 140.0
+    grade_num: 118.0
+    grade_num_dti: 770.0
+    grade_dti_loan: 549.0
+    gr_ln_dti_ir_cs: 780.0
+    grade_purpose: 3453.0
+    log_income_loan_dti: 736.0
+
+ROC-AUC Score: 0.9190480614601597
+
+=== 5-Fold Cross-Validation Classification Report (Averaged) ===
+
+Class      Precision    Recall  F1-Score   Support
+--------------------------------------------------
+0.0             0.64      0.78      0.71     23900
+1.0             0.94      0.89      0.92     94898
+macro avg       0.79      0.84      0.81    118798
+weighted avg      0.88      0.87      0.87    118798
+
+=== Average Confusion Matrix (over CV folds) ===
+                   0         1
+------------------------------
+0              93631     25869
+1              51892    422602
+
+Notes:
+    Set scale pos weight to 0.26
+
+-------------------------------------------------------
+========================= EXPERIMENT LOG =========================
+Timestamp: 2025-11-30 16:47:59
+
+ROC AUC Score: 0.92138
+
+Model Parameters:
+    boosting_type: gbdt
+    class_weight: None
+    colsample_bytree: 1.0
+    importance_type: split
+    learning_rate: 0.05
+    max_depth: -1
+    min_child_samples: 20
+    min_child_weight: 0.001
+    min_split_gain: 0.0
+    n_estimators: 500
+    n_jobs: None
+    num_leaves: 31
+    objective: binary
+    random_state: None
+    reg_alpha: 0.0
+    reg_lambda: 0.0
+    subsample: 1.0
+    subsample_for_bin: 200000
+    subsample_freq: 0
+    eval_metric: auc
+    verbose: -1
+    min_data_in_leaf: 20
+    lambda_l1: 0.0
+    lambda_l2: 0.0
+    min_gain_to_split: 0.0
+    feature_fraction: 0.9
+    bagging_fraction: 0.8
+    bagging_freq: 5
+    scale_pos_weight: 0.26
+
+Features Used (17):
+    annual_income, debt_to_income_ratio, credit_score, loan_amount, interest_rate, grade_num, grade_num_dti, grade_dti_loan, gr_ln_dti_ir_cs, log_income_loan_dti, TE_gender_mean, TE_marital_status_mean, TE_education_level_mean, TE_employment_status_mean, TE_loan_purpose_mean, TE_grade_subgrade_mean, TE_grade_purpose_mean
+
+Feature Importances:
+    annual_income: 1272.0
+    debt_to_income_ratio: 3010.0
+    credit_score: 1660.0
+    loan_amount: 1418.0
+    interest_rate: 1135.0
+    grade_num: 280.0
+    grade_num_dti: 719.0
+    grade_dti_loan: 618.0
+    gr_ln_dti_ir_cs: 709.0
+    log_income_loan_dti: 621.0
+    TE_gender_mean: 322.0
+    TE_marital_status_mean: 320.0
+    TE_education_level_mean: 445.0
+    TE_employment_status_mean: 875.0
+    TE_loan_purpose_mean: 471.0
+    TE_grade_subgrade_mean: 496.0
+    TE_grade_purpose_mean: 629.0
+
+ROC-AUC Score: 0.9213841427872613
+
+=== 5-Fold Cross-Validation Classification Report (Averaged) ===
+
+Class      Precision    Recall  F1-Score   Support
+--------------------------------------------------
+0.0             0.65      0.79      0.71     23900
+1.0             0.94      0.89      0.92     94898
+macro avg       0.79      0.84      0.81    118798
+weighted avg      0.88      0.87      0.87    118798
+
+=== Average Confusion Matrix (over CV folds) ===
+                   0         1
+------------------------------
+0              94027     25473
+1              51526    422968
+
+Notes:
+    Use Target Encoding of data
+
+-------------------------------------------------------
+========================= EXPERIMENT LOG =========================
+Timestamp: 2025-11-30 16:58:52
+
+ROC AUC Score: 0.91870
+
+Model Parameters:
+    boosting_type: gbdt
+    class_weight: None
+    colsample_bytree: 1.0
+    importance_type: split
+    learning_rate: 0.05
+    max_depth: -1
+    min_child_samples: 20
+    min_child_weight: 0.001
+    min_split_gain: 0.0
+    n_estimators: 500
+    n_jobs: None
+    num_leaves: 31
+    objective: binary
+    random_state: None
+    reg_alpha: 0.0
+    reg_lambda: 0.0
+    subsample: 1.0
+    subsample_for_bin: 200000
+    subsample_freq: 0
+    eval_metric: auc
+    verbose: -1
+    min_data_in_leaf: 20
+    lambda_l1: 0.0
+    lambda_l2: 0.0
+    min_gain_to_split: 0.0
+    feature_fraction: 0.9
+    bagging_fraction: 0.8
+    bagging_freq: 5
+    scale_pos_weight: 0.26
+
+Features Used (24):
+    annual_income, debt_to_income_ratio, credit_score, loan_amount, interest_rate, gender, marital_status, education_level, employment_status, loan_purpose, grade_subgrade, grade_num, grade_num_dti, grade_dti_loan, gr_ln_dti_ir_cs, grade_purpose, log_income_loan_dti, TE_gender_mean, TE_marital_status_mean, TE_education_level_mean, TE_employment_status_mean, TE_loan_purpose_mean, TE_grade_subgrade_mean, TE_grade_purpose_mean
+
+Feature Importances:
+    annual_income: 1075.0
+    debt_to_income_ratio: 2171.0
+    credit_score: 1300.0
+    loan_amount: 1105.0
+    interest_rate: 938.0
+    gender: 39.0
+    marital_status: 22.0
+    education_level: 35.0
+    employment_status: 28.0
+    loan_purpose: 4.0
+    grade_subgrade: 82.0
+    grade_num: 41.0
+    grade_num_dti: 610.0
+    grade_dti_loan: 412.0
+    gr_ln_dti_ir_cs: 679.0
+    grade_purpose: 3531.0
+    log_income_loan_dti: 607.0
+    TE_gender_mean: 205.0
+    TE_marital_status_mean: 302.0
+    TE_education_level_mean: 374.0
+    TE_employment_status_mean: 753.0
+    TE_loan_purpose_mean: 224.0
+    TE_grade_subgrade_mean: 188.0
+    TE_grade_purpose_mean: 275.0
+
+ROC-AUC Score: 0.9187018631765812
+
+=== 5-Fold Cross-Validation Classification Report (Averaged) ===
+
+Class      Precision    Recall  F1-Score   Support
+--------------------------------------------------
+0.0             0.64      0.78      0.71     23900
+1.0             0.94      0.89      0.92     94898
+macro avg       0.79      0.84      0.81    118798
+weighted avg      0.88      0.87      0.87    118798
+
+=== Average Confusion Matrix (over CV folds) ===
+                   0         1
+------------------------------
+0              93589     25911
+1              51897    422597
+
+Notes:
+    Use Target Encoding of data and not dropping original
+
+-------------------------------------------------------
+========================= EXPERIMENT LOG =========================
+Timestamp: 2025-11-30 17:14:20
+
+ROC AUC Score: 0.91906
+
+Model Parameters:
+    boosting_type: gbdt
+    class_weight: None
+    colsample_bytree: 1.0
+    importance_type: split
+    learning_rate: 0.05
+    max_depth: -1
+    min_child_samples: 20
+    min_child_weight: 0.001
+    min_split_gain: 0.0
+    n_estimators: 500
+    n_jobs: None
+    num_leaves: 31
+    objective: binary
+    random_state: None
+    reg_alpha: 0.0
+    reg_lambda: 0.0
+    subsample: 1.0
+    subsample_for_bin: 200000
+    subsample_freq: 0
+    eval_metric: auc
+    verbose: -1
+    min_data_in_leaf: 20
+    lambda_l1: 0.0
+    lambda_l2: 0.0
+    min_gain_to_split: 0.0
+    feature_fraction: 0.9
+    bagging_fraction: 0.8
+    bagging_freq: 5
+    scale_pos_weight: 0.26
+
+Features Used (18):
+    annual_income, debt_to_income_ratio, credit_score, loan_amount, interest_rate, grade_num, grade_num_dti, grade_dti_loan, gr_ln_dti_ir_cs, log_income_loan_dti, TE_gender_mean, TE_marital_status_mean, TE_education_level_mean, TE_employment_status_mean, TE_loan_purpose_mean, TE_grade_subgrade_mean, TE_grade_purpose_mean, grade_purpose
+
+Feature Importances:
+    annual_income: 1124.0
+    debt_to_income_ratio: 2360.0
+    credit_score: 1333.0
+    loan_amount: 1169.0
+    interest_rate: 872.0
+    grade_num: 58.0
+    grade_num_dti: 627.0
+    grade_dti_loan: 482.0
+    gr_ln_dti_ir_cs: 659.0
+    log_income_loan_dti: 552.0
+    TE_gender_mean: 230.0
+    TE_marital_status_mean: 288.0
+    TE_education_level_mean: 414.0
+    TE_employment_status_mean: 763.0
+    TE_loan_purpose_mean: 214.0
+    TE_grade_subgrade_mean: 212.0
+    TE_grade_purpose_mean: 328.0
+    grade_purpose: 3315.0
+
+ROC-AUC Score: 0.9190632634283148
+
+=== 5-Fold Cross-Validation Classification Report (Averaged) ===
+
+Class      Precision    Recall  F1-Score   Support
+--------------------------------------------------
+0.0             0.64      0.78      0.71     23900
+1.0             0.94      0.89      0.92     94898
+macro avg       0.79      0.84      0.81    118798
+weighted avg      0.88      0.87      0.87    118798
+
+=== Average Confusion Matrix (over CV folds) ===
+                   0         1
+------------------------------
+0              93680     25820
+1              51795    422699
+
+Notes:
+    Use Target Encoding of data and dropping original keep only grade_purpose
+
+-------------------------------------------------------
+========================= EXPERIMENT LOG =========================
+Timestamp: 2025-11-30 17:28:33
+
+ROC AUC Score: 0.92123
+
+Model Parameters:
+    boosting_type: gbdt
+    class_weight: None
+    colsample_bytree: 1.0
+    importance_type: split
+    learning_rate: 0.05
+    max_depth: -1
+    min_child_samples: 20
+    min_child_weight: 0.001
+    min_split_gain: 0.0
+    n_estimators: 500
+    n_jobs: None
+    num_leaves: 31
+    objective: binary
+    random_state: None
+    reg_alpha: 0.0
+    reg_lambda: 0.0
+    subsample: 1.0
+    subsample_for_bin: 200000
+    subsample_freq: 0
+    eval_metric: auc
+    verbose: -1
+    min_data_in_leaf: 20
+    lambda_l1: 0.0
+    lambda_l2: 0.0
+    min_gain_to_split: 0.0
+    feature_fraction: 0.9
+    bagging_fraction: 0.8
+    bagging_freq: 5
+    scale_pos_weight: 0.26
+
+Features Used (20):
+    annual_income, debt_to_income_ratio, credit_score, loan_amount, interest_rate, grade_num, grade_num_dti, grade_dti_loan, gr_ln_dti_ir_cs, dti_per_k, income_stress, income_stress_adj, log_income_loan_dti, TE_gender_mean, TE_marital_status_mean, TE_education_level_mean, TE_employment_status_mean, TE_loan_purpose_mean, TE_grade_subgrade_mean, TE_grade_purpose_mean
+
+Feature Importances:
+    annual_income: 998.0
+    debt_to_income_ratio: 2941.0
+    credit_score: 1609.0
+    loan_amount: 1050.0
+    interest_rate: 964.0
+    grade_num: 262.0
+    grade_num_dti: 630.0
+    grade_dti_loan: 526.0
+    gr_ln_dti_ir_cs: 619.0
+    dti_per_k: 526.0
+    income_stress: 499.0
+    income_stress_adj: 523.0
+    log_income_loan_dti: 524.0
+    TE_gender_mean: 306.0
+    TE_marital_status_mean: 298.0
+    TE_education_level_mean: 378.0
+    TE_employment_status_mean: 862.0
+    TE_loan_purpose_mean: 463.0
+    TE_grade_subgrade_mean: 415.0
+    TE_grade_purpose_mean: 607.0
+
+ROC-AUC Score: 0.921225029973793
+
+=== 5-Fold Cross-Validation Classification Report (Averaged) ===
+
+Class      Precision    Recall  F1-Score   Support
+--------------------------------------------------
+0.0             0.65      0.79      0.71     23900
+1.0             0.94      0.89      0.92     94898
+macro avg       0.79      0.84      0.81    118798
+weighted avg      0.88      0.87      0.87    118798
+
+=== Average Confusion Matrix (over CV folds) ===
+                   0         1
+------------------------------
+0              93946     25554
+1              51395    423099
+
+Notes:
+    Use Target Encoding of data with added features from gpt 3
+
+-------------------------------------------------------
+========================= EXPERIMENT LOG =========================
+Timestamp: 2025-11-30 17:32:34
+
+ROC AUC Score: 0.92130
+
+Model Parameters:
+    boosting_type: gbdt
+    class_weight: None
+    colsample_bytree: 1.0
+    importance_type: split
+    learning_rate: 0.05
+    max_depth: -1
+    min_child_samples: 20
+    min_child_weight: 0.001
+    min_split_gain: 0.0
+    n_estimators: 500
+    n_jobs: None
+    num_leaves: 31
+    objective: binary
+    random_state: None
+    reg_alpha: 0.0
+    reg_lambda: 0.0
+    subsample: 1.0
+    subsample_for_bin: 200000
+    subsample_freq: 0
+    eval_metric: auc
+    verbose: -1
+    min_data_in_leaf: 20
+    lambda_l1: 0.0
+    lambda_l2: 0.0
+    min_gain_to_split: 0.0
+    feature_fraction: 0.9
+    bagging_fraction: 0.8
+    bagging_freq: 5
+    scale_pos_weight: 0.26
+
+Features Used (18):
+    annual_income, debt_to_income_ratio, credit_score, loan_amount, interest_rate, grade_num, grade_num_dti, grade_dti_loan, gr_ln_dti_ir_cs, affordability, log_income_loan_dti, TE_gender_mean, TE_marital_status_mean, TE_education_level_mean, TE_employment_status_mean, TE_loan_purpose_mean, TE_grade_subgrade_mean, TE_grade_purpose_mean
+
+Feature Importances:
+    annual_income: 1091.0
+    debt_to_income_ratio: 2963.0
+    credit_score: 1667.0
+    loan_amount: 1238.0
+    interest_rate: 1013.0
+    grade_num: 259.0
+    grade_num_dti: 660.0
+    grade_dti_loan: 619.0
+    gr_ln_dti_ir_cs: 665.0
+    affordability: 781.0
+    log_income_loan_dti: 643.0
+    TE_gender_mean: 301.0
+    TE_marital_status_mean: 310.0
+    TE_education_level_mean: 430.0
+    TE_employment_status_mean: 837.0
+    TE_loan_purpose_mean: 476.0
+    TE_grade_subgrade_mean: 441.0
+    TE_grade_purpose_mean: 606.0
+
+ROC-AUC Score: 0.9212954615930615
+
+=== 5-Fold Cross-Validation Classification Report (Averaged) ===
+
+Class      Precision    Recall  F1-Score   Support
+--------------------------------------------------
+0.0             0.65      0.79      0.71     23900
+1.0             0.94      0.89      0.92     94898
+macro avg       0.79      0.84      0.81    118798
+weighted avg      0.88      0.87      0.88    118798
+
+=== Average Confusion Matrix (over CV folds) ===
+                   0         1
+------------------------------
+0              93996     25504
+1              51352    423142
+
+Notes:
+    Use Target Encoding of data with added features from gpt 3
+
+-------------------------------------------------------
+========================= EXPERIMENT LOG =========================
+Timestamp: 2025-11-30 17:35:32
+
+ROC AUC Score: 0.92130
+
+Model Parameters:
+    boosting_type: gbdt
+    class_weight: None
+    colsample_bytree: 1.0
+    importance_type: split
+    learning_rate: 0.05
+    max_depth: -1
+    min_child_samples: 20
+    min_child_weight: 0.001
+    min_split_gain: 0.0
+    n_estimators: 500
+    n_jobs: None
+    num_leaves: 31
+    objective: binary
+    random_state: None
+    reg_alpha: 0.0
+    reg_lambda: 0.0
+    subsample: 1.0
+    subsample_for_bin: 200000
+    subsample_freq: 0
+    eval_metric: auc
+    verbose: -1
+    min_data_in_leaf: 20
+    lambda_l1: 0.0
+    lambda_l2: 0.0
+    min_gain_to_split: 0.0
+    feature_fraction: 0.9
+    bagging_fraction: 0.8
+    bagging_freq: 5
+    scale_pos_weight: 0.26
+
+Features Used (18):
+    annual_income, debt_to_income_ratio, credit_score, loan_amount, interest_rate, grade_num, grade_num_dti, grade_dti_loan, gr_ln_dti_ir_cs, interest_per_k, log_income_loan_dti, TE_gender_mean, TE_marital_status_mean, TE_education_level_mean, TE_employment_status_mean, TE_loan_purpose_mean, TE_grade_subgrade_mean, TE_grade_purpose_mean
+
+Feature Importances:
+    annual_income: 1245.0
+    debt_to_income_ratio: 2898.0
+    credit_score: 1669.0
+    loan_amount: 1219.0
+    interest_rate: 991.0
+    grade_num: 271.0
+    grade_num_dti: 698.0
+    grade_dti_loan: 599.0
+    gr_ln_dti_ir_cs: 624.0
+    interest_per_k: 691.0
+    log_income_loan_dti: 626.0
+    TE_gender_mean: 303.0
+    TE_marital_status_mean: 342.0
+    TE_education_level_mean: 457.0
+    TE_employment_status_mean: 876.0
+    TE_loan_purpose_mean: 446.0
+    TE_grade_subgrade_mean: 428.0
+    TE_grade_purpose_mean: 617.0
+
+ROC-AUC Score: 0.9212973808540516
+
+=== 5-Fold Cross-Validation Classification Report (Averaged) ===
+
+Class      Precision    Recall  F1-Score   Support
+--------------------------------------------------
+0.0             0.65      0.79      0.71     23900
+1.0             0.94      0.89      0.92     94898
+macro avg       0.79      0.84      0.81    118798
+weighted avg      0.88      0.87      0.87    118798
+
+=== Average Confusion Matrix (over CV folds) ===
+                   0         1
+------------------------------
+0              93972     25528
+1              51462    423032
+
+Notes:
+    with interest_rate_per_k
+
+-------------------------------------------------------
+========================= EXPERIMENT LOG =========================
+Timestamp: 2025-11-30 17:57:42
+
+ROC AUC Score: 0.92135
+
+Model Parameters:
+    boosting_type: gbdt
+    class_weight: None
+    colsample_bytree: 1.0
+    importance_type: split
+    learning_rate: 0.05
+    max_depth: -1
+    min_child_samples: 20
+    min_child_weight: 0.001
+    min_split_gain: 0.0
+    n_estimators: 1000
+    n_jobs: None
+    num_leaves: 31
+    objective: binary
+    random_state: None
+    reg_alpha: 0.0
+    reg_lambda: 0.0
+    subsample: 1.0
+    subsample_for_bin: 200000
+    subsample_freq: 0
+    eval_metric: auc
+    verbose: -1
+    min_data_in_leaf: 20
+    lambda_l1: 0.0
+    lambda_l2: 0.0
+    min_gain_to_split: 0.0
+    feature_fraction: 0.9
+    bagging_fraction: 0.8
+    bagging_freq: 5
+    scale_pos_weight: 0.26
+
+Features Used (306):
+    annual_income, debt_to_income_ratio, credit_score, loan_amount, interest_rate, grade_num, grade_num_dti, grade_dti_loan, gr_ln_dti_ir_cs, interest_per_k, gender_Male, gender_Other, marital_status_Married, marital_status_Single, marital_status_Widowed, education_level_High School, education_level_Master's, education_level_Other, education_level_PhD, employment_status_Retired, employment_status_Self-employed, employment_status_Student, employment_status_Unemployed, loan_purpose_Car, loan_purpose_Debt consolidation, loan_purpose_Education, loan_purpose_Home, loan_purpose_Medical, loan_purpose_Other, loan_purpose_Vacation, grade_subgrade_A2, grade_subgrade_A3, grade_subgrade_A4, grade_subgrade_A5, grade_subgrade_B1, grade_subgrade_B2, grade_subgrade_B3, grade_subgrade_B4, grade_subgrade_B5, grade_subgrade_C1, grade_subgrade_C2, grade_subgrade_C3, grade_subgrade_C4, grade_subgrade_C5, grade_subgrade_D1, grade_subgrade_D2, grade_subgrade_D3, grade_subgrade_D4, grade_subgrade_D5, grade_subgrade_E1, grade_subgrade_E2, grade_subgrade_E3, grade_subgrade_E4, grade_subgrade_E5, grade_subgrade_F1, grade_subgrade_F2, grade_subgrade_F3, grade_subgrade_F4, grade_subgrade_F5, grade_purpose_A1_Car, grade_purpose_A1_Debt consolidation, grade_purpose_A1_Education, grade_purpose_A1_Home, grade_purpose_A1_Medical, grade_purpose_A1_Other, grade_purpose_A1_Vacation, grade_purpose_A2_Business, grade_purpose_A2_Car, grade_purpose_A2_Debt consolidation, grade_purpose_A2_Education, grade_purpose_A2_Home, grade_purpose_A2_Medical, grade_purpose_A2_Other, grade_purpose_A2_Vacation, grade_purpose_A3_Business, grade_purpose_A3_Car, grade_purpose_A3_Debt consolidation, grade_purpose_A3_Education, grade_purpose_A3_Home, grade_purpose_A3_Medical, grade_purpose_A3_Other, grade_purpose_A3_Vacation, grade_purpose_A4_Business, grade_purpose_A4_Car, grade_purpose_A4_Debt consolidation, grade_purpose_A4_Education, grade_purpose_A4_Home, grade_purpose_A4_Medical, grade_purpose_A4_Other, grade_purpose_A4_Vacation, grade_purpose_A5_Business, grade_purpose_A5_Car, grade_purpose_A5_Debt consolidation, grade_purpose_A5_Education, grade_purpose_A5_Home, grade_purpose_A5_Medical, grade_purpose_A5_Other, grade_purpose_A5_Vacation, grade_purpose_B1_Business, grade_purpose_B1_Car, grade_purpose_B1_Debt consolidation, grade_purpose_B1_Education, grade_purpose_B1_Home, grade_purpose_B1_Medical, grade_purpose_B1_Other, grade_purpose_B1_Vacation, grade_purpose_B2_Business, grade_purpose_B2_Car, grade_purpose_B2_Debt consolidation, grade_purpose_B2_Education, grade_purpose_B2_Home, grade_purpose_B2_Medical, grade_purpose_B2_Other, grade_purpose_B2_Vacation, grade_purpose_B3_Business, grade_purpose_B3_Car, grade_purpose_B3_Debt consolidation, grade_purpose_B3_Education, grade_purpose_B3_Home, grade_purpose_B3_Medical, grade_purpose_B3_Other, grade_purpose_B3_Vacation, grade_purpose_B4_Business, grade_purpose_B4_Car, grade_purpose_B4_Debt consolidation, grade_purpose_B4_Education, grade_purpose_B4_Home, grade_purpose_B4_Medical, grade_purpose_B4_Other, grade_purpose_B4_Vacation, grade_purpose_B5_Business, grade_purpose_B5_Car, grade_purpose_B5_Debt consolidation, grade_purpose_B5_Education, grade_purpose_B5_Home, grade_purpose_B5_Medical, grade_purpose_B5_Other, grade_purpose_B5_Vacation, grade_purpose_C1_Business, grade_purpose_C1_Car, grade_purpose_C1_Debt consolidation, grade_purpose_C1_Education, grade_purpose_C1_Home, grade_purpose_C1_Medical, grade_purpose_C1_Other, grade_purpose_C1_Vacation, grade_purpose_C2_Business, grade_purpose_C2_Car, grade_purpose_C2_Debt consolidation, grade_purpose_C2_Education, grade_purpose_C2_Home, grade_purpose_C2_Medical, grade_purpose_C2_Other, grade_purpose_C2_Vacation, grade_purpose_C3_Business, grade_purpose_C3_Car, grade_purpose_C3_Debt consolidation, grade_purpose_C3_Education, grade_purpose_C3_Home, grade_purpose_C3_Medical, grade_purpose_C3_Other, grade_purpose_C3_Vacation, grade_purpose_C4_Business, grade_purpose_C4_Car, grade_purpose_C4_Debt consolidation, grade_purpose_C4_Education, grade_purpose_C4_Home, grade_purpose_C4_Medical, grade_purpose_C4_Other, grade_purpose_C4_Vacation, grade_purpose_C5_Business, grade_purpose_C5_Car, grade_purpose_C5_Debt consolidation, grade_purpose_C5_Education, grade_purpose_C5_Home, grade_purpose_C5_Medical, grade_purpose_C5_Other, grade_purpose_C5_Vacation, grade_purpose_D1_Business, grade_purpose_D1_Car, grade_purpose_D1_Debt consolidation, grade_purpose_D1_Education, grade_purpose_D1_Home, grade_purpose_D1_Medical, grade_purpose_D1_Other, grade_purpose_D1_Vacation, grade_purpose_D2_Business, grade_purpose_D2_Car, grade_purpose_D2_Debt consolidation, grade_purpose_D2_Education, grade_purpose_D2_Home, grade_purpose_D2_Medical, grade_purpose_D2_Other, grade_purpose_D2_Vacation, grade_purpose_D3_Business, grade_purpose_D3_Car, grade_purpose_D3_Debt consolidation, grade_purpose_D3_Education, grade_purpose_D3_Home, grade_purpose_D3_Medical, grade_purpose_D3_Other, grade_purpose_D3_Vacation, grade_purpose_D4_Business, grade_purpose_D4_Car, grade_purpose_D4_Debt consolidation, grade_purpose_D4_Education, grade_purpose_D4_Home, grade_purpose_D4_Medical, grade_purpose_D4_Other, grade_purpose_D4_Vacation, grade_purpose_D5_Business, grade_purpose_D5_Car, grade_purpose_D5_Debt consolidation, grade_purpose_D5_Education, grade_purpose_D5_Home, grade_purpose_D5_Medical, grade_purpose_D5_Other, grade_purpose_D5_Vacation, grade_purpose_E1_Business, grade_purpose_E1_Car, grade_purpose_E1_Debt consolidation, grade_purpose_E1_Education, grade_purpose_E1_Home, grade_purpose_E1_Medical, grade_purpose_E1_Other, grade_purpose_E1_Vacation, grade_purpose_E2_Business, grade_purpose_E2_Car, grade_purpose_E2_Debt consolidation, grade_purpose_E2_Education, grade_purpose_E2_Home, grade_purpose_E2_Medical, grade_purpose_E2_Other, grade_purpose_E2_Vacation, grade_purpose_E3_Business, grade_purpose_E3_Car, grade_purpose_E3_Debt consolidation, grade_purpose_E3_Education, grade_purpose_E3_Home, grade_purpose_E3_Medical, grade_purpose_E3_Other, grade_purpose_E3_Vacation, grade_purpose_E4_Business, grade_purpose_E4_Car, grade_purpose_E4_Debt consolidation, grade_purpose_E4_Education, grade_purpose_E4_Home, grade_purpose_E4_Medical, grade_purpose_E4_Other, grade_purpose_E4_Vacation, grade_purpose_E5_Business, grade_purpose_E5_Car, grade_purpose_E5_Debt consolidation, grade_purpose_E5_Education, grade_purpose_E5_Home, grade_purpose_E5_Medical, grade_purpose_E5_Other, grade_purpose_E5_Vacation, grade_purpose_F1_Business, grade_purpose_F1_Car, grade_purpose_F1_Debt consolidation, grade_purpose_F1_Education, grade_purpose_F1_Home, grade_purpose_F1_Medical, grade_purpose_F1_Other, grade_purpose_F1_Vacation, grade_purpose_F2_Business, grade_purpose_F2_Car, grade_purpose_F2_Debt consolidation, grade_purpose_F2_Education, grade_purpose_F2_Home, grade_purpose_F2_Medical, grade_purpose_F2_Other, grade_purpose_F2_Vacation, grade_purpose_F3_Business, grade_purpose_F3_Car, grade_purpose_F3_Debt consolidation, grade_purpose_F3_Education, grade_purpose_F3_Home, grade_purpose_F3_Medical, grade_purpose_F3_Other, grade_purpose_F3_Vacation, grade_purpose_F4_Business, grade_purpose_F4_Car, grade_purpose_F4_Debt consolidation, grade_purpose_F4_Education, grade_purpose_F4_Home, grade_purpose_F4_Medical, grade_purpose_F4_Other, grade_purpose_F4_Vacation, grade_purpose_F5_Business, grade_purpose_F5_Car, grade_purpose_F5_Debt consolidation, grade_purpose_F5_Education, grade_purpose_F5_Home, grade_purpose_F5_Medical, grade_purpose_F5_Other, grade_purpose_F5_Vacation, log_income_loan_dti, TE_gender_mean, TE_marital_status_mean, TE_education_level_mean, TE_employment_status_mean, TE_loan_purpose_mean, TE_grade_subgrade_mean, TE_grade_purpose_mean
+
+Feature Importances:
+    annual_income: 2469.0
+    debt_to_income_ratio: 3897.0
+    credit_score: 2800.0
+    loan_amount: 2187.0
+    interest_rate: 2291.0
+    grade_num: 273.0
+    grade_num_dti: 1098.0
+    grade_dti_loan: 1171.0
+    gr_ln_dti_ir_cs: 1433.0
+    interest_per_k: 1539.0
+    gender_Male: 77.0
+    gender_Other: 25.0
+    marital_status_Married: 108.0
+    marital_status_Single: 78.0
+    marital_status_Widowed: 21.0
+    education_level_High School: 68.0
+    education_level_Master's: 106.0
+    education_level_Other: 74.0
+    education_level_PhD: 32.0
+    employment_status_Retired: 149.0
+    employment_status_Self-employed: 47.0
+    employment_status_Student: 139.0
+    employment_status_Unemployed: 80.0
+    loan_purpose_Car: 39.0
+    loan_purpose_Debt consolidation: 60.0
+    loan_purpose_Education: 25.0
+    loan_purpose_Home: 20.0
+    loan_purpose_Medical: 22.0
+    loan_purpose_Other: 57.0
+    loan_purpose_Vacation: 29.0
+    grade_subgrade_A2: 7.0
+    grade_subgrade_A3: 8.0
+    grade_subgrade_A4: 7.0
+    grade_subgrade_A5: 7.0
+    grade_subgrade_B1: 31.0
+    grade_subgrade_B2: 9.0
+    grade_subgrade_B3: 12.0
+    grade_subgrade_B4: 14.0
+    grade_subgrade_B5: 24.0
+    grade_subgrade_C1: 33.0
+    grade_subgrade_C2: 25.0
+    grade_subgrade_C3: 44.0
+    grade_subgrade_C4: 47.0
+    grade_subgrade_C5: 62.0
+    grade_subgrade_D1: 31.0
+    grade_subgrade_D2: 35.0
+    grade_subgrade_D3: 62.0
+    grade_subgrade_D4: 32.0
+    grade_subgrade_D5: 27.0
+    grade_subgrade_E1: 8.0
+    grade_subgrade_E2: 13.0
+    grade_subgrade_E3: 12.0
+    grade_subgrade_E4: 8.0
+    grade_subgrade_E5: 28.0
+    grade_subgrade_F1: 17.0
+    grade_subgrade_F2: 6.0
+    grade_subgrade_F3: 8.0
+    grade_subgrade_F4: 8.0
+    grade_subgrade_F5: 2.0
+    grade_purpose_A1_Car: 0.0
+    grade_purpose_A1_Debt consolidation: 4.0
+    grade_purpose_A1_Education: 0.0
+    grade_purpose_A1_Home: 1.0
+    grade_purpose_A1_Medical: 0.0
+    grade_purpose_A1_Other: 10.0
+    grade_purpose_A1_Vacation: 0.0
+    grade_purpose_A2_Business: 0.0
+    grade_purpose_A2_Car: 0.0
+    grade_purpose_A2_Debt consolidation: 4.0
+    grade_purpose_A2_Education: 3.0
+    grade_purpose_A2_Home: 3.0
+    grade_purpose_A2_Medical: 0.0
+    grade_purpose_A2_Other: 7.0
+    grade_purpose_A2_Vacation: 0.0
+    grade_purpose_A3_Business: 0.0
+    grade_purpose_A3_Car: 5.0
+    grade_purpose_A3_Debt consolidation: 1.0
+    grade_purpose_A3_Education: 0.0
+    grade_purpose_A3_Home: 4.0
+    grade_purpose_A3_Medical: 0.0
+    grade_purpose_A3_Other: 1.0
+    grade_purpose_A3_Vacation: 0.0
+    grade_purpose_A4_Business: 0.0
+    grade_purpose_A4_Car: 4.0
+    grade_purpose_A4_Debt consolidation: 3.0
+    grade_purpose_A4_Education: 0.0
+    grade_purpose_A4_Home: 0.0
+    grade_purpose_A4_Medical: 0.0
+    grade_purpose_A4_Other: 1.0
+    grade_purpose_A4_Vacation: 0.0
+    grade_purpose_A5_Business: 1.0
+    grade_purpose_A5_Car: 3.0
+    grade_purpose_A5_Debt consolidation: 9.0
+    grade_purpose_A5_Education: 0.0
+    grade_purpose_A5_Home: 6.0
+    grade_purpose_A5_Medical: 0.0
+    grade_purpose_A5_Other: 2.0
+    grade_purpose_A5_Vacation: 0.0
+    grade_purpose_B1_Business: 6.0
+    grade_purpose_B1_Car: 6.0
+    grade_purpose_B1_Debt consolidation: 11.0
+    grade_purpose_B1_Education: 15.0
+    grade_purpose_B1_Home: 9.0
+    grade_purpose_B1_Medical: 3.0
+    grade_purpose_B1_Other: 7.0
+    grade_purpose_B1_Vacation: 8.0
+    grade_purpose_B2_Business: 8.0
+    grade_purpose_B2_Car: 6.0
+    grade_purpose_B2_Debt consolidation: 13.0
+    grade_purpose_B2_Education: 13.0
+    grade_purpose_B2_Home: 15.0
+    grade_purpose_B2_Medical: 10.0
+    grade_purpose_B2_Other: 9.0
+    grade_purpose_B2_Vacation: 9.0
+    grade_purpose_B3_Business: 10.0
+    grade_purpose_B3_Car: 4.0
+    grade_purpose_B3_Debt consolidation: 18.0
+    grade_purpose_B3_Education: 15.0
+    grade_purpose_B3_Home: 14.0
+    grade_purpose_B3_Medical: 23.0
+    grade_purpose_B3_Other: 13.0
+    grade_purpose_B3_Vacation: 5.0
+    grade_purpose_B4_Business: 2.0
+    grade_purpose_B4_Car: 7.0
+    grade_purpose_B4_Debt consolidation: 15.0
+    grade_purpose_B4_Education: 8.0
+    grade_purpose_B4_Home: 2.0
+    grade_purpose_B4_Medical: 0.0
+    grade_purpose_B4_Other: 4.0
+    grade_purpose_B4_Vacation: 1.0
+    grade_purpose_B5_Business: 2.0
+    grade_purpose_B5_Car: 14.0
+    grade_purpose_B5_Debt consolidation: 10.0
+    grade_purpose_B5_Education: 4.0
+    grade_purpose_B5_Home: 4.0
+    grade_purpose_B5_Medical: 0.0
+    grade_purpose_B5_Other: 26.0
+    grade_purpose_B5_Vacation: 0.0
+    grade_purpose_C1_Business: 14.0
+    grade_purpose_C1_Car: 25.0
+    grade_purpose_C1_Debt consolidation: 26.0
+    grade_purpose_C1_Education: 17.0
+    grade_purpose_C1_Home: 19.0
+    grade_purpose_C1_Medical: 10.0
+    grade_purpose_C1_Other: 32.0
+    grade_purpose_C1_Vacation: 19.0
+    grade_purpose_C2_Business: 19.0
+    grade_purpose_C2_Car: 25.0
+    grade_purpose_C2_Debt consolidation: 48.0
+    grade_purpose_C2_Education: 7.0
+    grade_purpose_C2_Home: 7.0
+    grade_purpose_C2_Medical: 10.0
+    grade_purpose_C2_Other: 22.0
+    grade_purpose_C2_Vacation: 4.0
+    grade_purpose_C3_Business: 20.0
+    grade_purpose_C3_Car: 31.0
+    grade_purpose_C3_Debt consolidation: 34.0
+    grade_purpose_C3_Education: 13.0
+    grade_purpose_C3_Home: 17.0
+    grade_purpose_C3_Medical: 9.0
+    grade_purpose_C3_Other: 31.0
+    grade_purpose_C3_Vacation: 25.0
+    grade_purpose_C4_Business: 15.0
+    grade_purpose_C4_Car: 37.0
+    grade_purpose_C4_Debt consolidation: 28.0
+    grade_purpose_C4_Education: 15.0
+    grade_purpose_C4_Home: 12.0
+    grade_purpose_C4_Medical: 17.0
+    grade_purpose_C4_Other: 15.0
+    grade_purpose_C4_Vacation: 12.0
+    grade_purpose_C5_Business: 11.0
+    grade_purpose_C5_Car: 15.0
+    grade_purpose_C5_Debt consolidation: 39.0
+    grade_purpose_C5_Education: 10.0
+    grade_purpose_C5_Home: 25.0
+    grade_purpose_C5_Medical: 18.0
+    grade_purpose_C5_Other: 19.0
+    grade_purpose_C5_Vacation: 16.0
+    grade_purpose_D1_Business: 8.0
+    grade_purpose_D1_Car: 15.0
+    grade_purpose_D1_Debt consolidation: 20.0
+    grade_purpose_D1_Education: 14.0
+    grade_purpose_D1_Home: 6.0
+    grade_purpose_D1_Medical: 8.0
+    grade_purpose_D1_Other: 23.0
+    grade_purpose_D1_Vacation: 2.0
+    grade_purpose_D2_Business: 14.0
+    grade_purpose_D2_Car: 15.0
+    grade_purpose_D2_Debt consolidation: 31.0
+    grade_purpose_D2_Education: 16.0
+    grade_purpose_D2_Home: 11.0
+    grade_purpose_D2_Medical: 14.0
+    grade_purpose_D2_Other: 12.0
+    grade_purpose_D2_Vacation: 5.0
+    grade_purpose_D3_Business: 16.0
+    grade_purpose_D3_Car: 17.0
+    grade_purpose_D3_Debt consolidation: 16.0
+    grade_purpose_D3_Education: 8.0
+    grade_purpose_D3_Home: 12.0
+    grade_purpose_D3_Medical: 5.0
+    grade_purpose_D3_Other: 23.0
+    grade_purpose_D3_Vacation: 12.0
+    grade_purpose_D4_Business: 6.0
+    grade_purpose_D4_Car: 13.0
+    grade_purpose_D4_Debt consolidation: 35.0
+    grade_purpose_D4_Education: 12.0
+    grade_purpose_D4_Home: 13.0
+    grade_purpose_D4_Medical: 9.0
+    grade_purpose_D4_Other: 15.0
+    grade_purpose_D4_Vacation: 8.0
+    grade_purpose_D5_Business: 10.0
+    grade_purpose_D5_Car: 9.0
+    grade_purpose_D5_Debt consolidation: 32.0
+    grade_purpose_D5_Education: 10.0
+    grade_purpose_D5_Home: 25.0
+    grade_purpose_D5_Medical: 6.0
+    grade_purpose_D5_Other: 8.0
+    grade_purpose_D5_Vacation: 10.0
+    grade_purpose_E1_Business: 4.0
+    grade_purpose_E1_Car: 8.0
+    grade_purpose_E1_Debt consolidation: 7.0
+    grade_purpose_E1_Education: 0.0
+    grade_purpose_E1_Home: 0.0
+    grade_purpose_E1_Medical: 4.0
+    grade_purpose_E1_Other: 3.0
+    grade_purpose_E1_Vacation: 0.0
+    grade_purpose_E2_Business: 0.0
+    grade_purpose_E2_Car: 7.0
+    grade_purpose_E2_Debt consolidation: 19.0
+    grade_purpose_E2_Education: 8.0
+    grade_purpose_E2_Home: 10.0
+    grade_purpose_E2_Medical: 14.0
+    grade_purpose_E2_Other: 7.0
+    grade_purpose_E2_Vacation: 0.0
+    grade_purpose_E3_Business: 5.0
+    grade_purpose_E3_Car: 8.0
+    grade_purpose_E3_Debt consolidation: 6.0
+    grade_purpose_E3_Education: 2.0
+    grade_purpose_E3_Home: 10.0
+    grade_purpose_E3_Medical: 8.0
+    grade_purpose_E3_Other: 2.0
+    grade_purpose_E3_Vacation: 0.0
+    grade_purpose_E4_Business: 7.0
+    grade_purpose_E4_Car: 5.0
+    grade_purpose_E4_Debt consolidation: 12.0
+    grade_purpose_E4_Education: 0.0
+    grade_purpose_E4_Home: 6.0
+    grade_purpose_E4_Medical: 1.0
+    grade_purpose_E4_Other: 10.0
+    grade_purpose_E4_Vacation: 5.0
+    grade_purpose_E5_Business: 1.0
+    grade_purpose_E5_Car: 8.0
+    grade_purpose_E5_Debt consolidation: 12.0
+    grade_purpose_E5_Education: 12.0
+    grade_purpose_E5_Home: 1.0
+    grade_purpose_E5_Medical: 11.0
+    grade_purpose_E5_Other: 0.0
+    grade_purpose_E5_Vacation: 9.0
+    grade_purpose_F1_Business: 2.0
+    grade_purpose_F1_Car: 1.0
+    grade_purpose_F1_Debt consolidation: 6.0
+    grade_purpose_F1_Education: 0.0
+    grade_purpose_F1_Home: 2.0
+    grade_purpose_F1_Medical: 5.0
+    grade_purpose_F1_Other: 2.0
+    grade_purpose_F1_Vacation: 1.0
+    grade_purpose_F2_Business: 3.0
+    grade_purpose_F2_Car: 1.0
+    grade_purpose_F2_Debt consolidation: 5.0
+    grade_purpose_F2_Education: 1.0
+    grade_purpose_F2_Home: 1.0
+    grade_purpose_F2_Medical: 0.0
+    grade_purpose_F2_Other: 0.0
+    grade_purpose_F2_Vacation: 5.0
+    grade_purpose_F3_Business: 0.0
+    grade_purpose_F3_Car: 4.0
+    grade_purpose_F3_Debt consolidation: 2.0
+    grade_purpose_F3_Education: 9.0
+    grade_purpose_F3_Home: 3.0
+    grade_purpose_F3_Medical: 1.0
+    grade_purpose_F3_Other: 1.0
+    grade_purpose_F3_Vacation: 3.0
+    grade_purpose_F4_Business: 1.0
+    grade_purpose_F4_Car: 6.0
+    grade_purpose_F4_Debt consolidation: 19.0
+    grade_purpose_F4_Education: 1.0
+    grade_purpose_F4_Home: 4.0
+    grade_purpose_F4_Medical: 0.0
+    grade_purpose_F4_Other: 5.0
+    grade_purpose_F4_Vacation: 7.0
+    grade_purpose_F5_Business: 9.0
+    grade_purpose_F5_Car: 8.0
+    grade_purpose_F5_Debt consolidation: 11.0
+    grade_purpose_F5_Education: 1.0
+    grade_purpose_F5_Home: 5.0
+    grade_purpose_F5_Medical: 6.0
+    grade_purpose_F5_Other: 3.0
+    grade_purpose_F5_Vacation: 6.0
+    log_income_loan_dti: 1272.0
+    TE_gender_mean: 640.0
+    TE_marital_status_mean: 663.0
+    TE_education_level_mean: 894.0
+    TE_employment_status_mean: 853.0
+    TE_loan_purpose_mean: 762.0
+    TE_grade_subgrade_mean: 741.0
+    TE_grade_purpose_mean: 999.0
+
+ROC-AUC Score: 0.9213514417375477
+
+=== 5-Fold Cross-Validation Classification Report (Averaged) ===
+
+Class      Precision    Recall  F1-Score   Support
+--------------------------------------------------
+0.0             0.65      0.78      0.71     23900
+1.0             0.94      0.89      0.92     94898
+macro avg       0.80      0.84      0.81    118798
+weighted avg      0.88      0.87      0.88    118798
+
+=== Average Confusion Matrix (over CV folds) ===
+                   0         1
+------------------------------
+0              93790     25710
+1              50414    424080
+
+Notes:
+    with interest_rate_per_k and n_estimators 10000
+
+-------------------------------------------------------
+========================= EXPERIMENT LOG =========================
+Timestamp: 2025-11-30 18:05:48
+
+ROC AUC Score: 0.92156
+
+Model Parameters:
+    boosting_type: gbdt
+    class_weight: None
+    colsample_bytree: 1.0
+    importance_type: split
+    learning_rate: 0.05
+    max_depth: -1
+    min_child_samples: 20
+    min_child_weight: 0.001
+    min_split_gain: 0.0
+    n_estimators: 1000
+    n_jobs: None
+    num_leaves: 31
+    objective: binary
+    random_state: None
+    reg_alpha: 0.0
+    reg_lambda: 0.0
+    subsample: 1.0
+    subsample_for_bin: 200000
+    subsample_freq: 0
+    eval_metric: auc
+    verbose: -1
+    min_data_in_leaf: 20
+    lambda_l1: 0.0
+    lambda_l2: 0.0
+    min_gain_to_split: 0.0
+    feature_fraction: 0.9
+    bagging_fraction: 0.8
+    bagging_freq: 5
+    scale_pos_weight: 0.26
+
+Features Used (38):
+    annual_income, debt_to_income_ratio, credit_score, loan_amount, interest_rate, grade_num, grade_num_dti, grade_dti_loan, gr_ln_dti_ir_cs, interest_per_k, gender_Male, gender_Other, marital_status_Married, marital_status_Single, marital_status_Widowed, education_level_High School, education_level_Master's, education_level_Other, education_level_PhD, employment_status_Retired, employment_status_Self-employed, employment_status_Student, employment_status_Unemployed, loan_purpose_Car, loan_purpose_Debt consolidation, loan_purpose_Education, loan_purpose_Home, loan_purpose_Medical, loan_purpose_Other, loan_purpose_Vacation, log_income_loan_dti, TE_gender_mean, TE_marital_status_mean, TE_education_level_mean, TE_employment_status_mean, TE_loan_purpose_mean, TE_grade_subgrade_mean, TE_grade_purpose_mean
+
+Feature Importances:
+    annual_income: 2589.0
+    debt_to_income_ratio: 4123.0
+    credit_score: 2885.0
+    loan_amount: 2301.0
+    interest_rate: 2318.0
+    grade_num: 478.0
+    grade_num_dti: 1377.0
+    grade_dti_loan: 1267.0
+    gr_ln_dti_ir_cs: 1496.0
+    interest_per_k: 1528.0
+    gender_Male: 72.0
+    gender_Other: 25.0
+    marital_status_Married: 96.0
+    marital_status_Single: 114.0
+    marital_status_Widowed: 24.0
+    education_level_High School: 61.0
+    education_level_Master's: 129.0
+    education_level_Other: 85.0
+    education_level_PhD: 38.0
+    employment_status_Retired: 201.0
+    employment_status_Self-employed: 57.0
+    employment_status_Student: 140.0
+    employment_status_Unemployed: 139.0
+    loan_purpose_Car: 84.0
+    loan_purpose_Debt consolidation: 108.0
+    loan_purpose_Education: 35.0
+    loan_purpose_Home: 41.0
+    loan_purpose_Medical: 41.0
+    loan_purpose_Other: 94.0
+    loan_purpose_Vacation: 41.0
+    log_income_loan_dti: 1430.0
+    TE_gender_mean: 685.0
+    TE_marital_status_mean: 707.0
+    TE_education_level_mean: 887.0
+    TE_employment_status_mean: 822.0
+    TE_loan_purpose_mean: 983.0
+    TE_grade_subgrade_mean: 1077.0
+    TE_grade_purpose_mean: 1422.0
+
+ROC-AUC Score: 0.9215596604446263
+
+=== 5-Fold Cross-Validation Classification Report (Averaged) ===
+
+Class      Precision    Recall  F1-Score   Support
+--------------------------------------------------
+0.0             0.65      0.78      0.71     23900
+1.0             0.94      0.89      0.92     94898
+macro avg       0.80      0.84      0.81    118798
+weighted avg      0.88      0.87      0.88    118798
+
+=== Average Confusion Matrix (over CV folds) ===
+                   0         1
+------------------------------
+0              93784     25716
+1              50431    424063
+
+Notes:
+    crete ohe without grade_subgrade and grade_purpose
+
+-------------------------------------------------------
