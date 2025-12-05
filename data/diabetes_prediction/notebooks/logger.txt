@@ -1,0 +1,410 @@
+========================= EXPERIMENT LOG =========================
+Timestamp: 2025-12-04 13:19:50
+
+ROC AUC Score: 0.72714
+
+Model Parameters:
+    boosting_type: gbdt
+    class_weight: balanced
+    colsample_bytree: 0.8
+    importance_type: split
+    learning_rate: 0.03
+    max_depth: -1
+    min_child_samples: 20
+    min_child_weight: 0.001
+    min_split_gain: 0.0
+    n_estimators: 1500
+    n_jobs: -1
+    num_leaves: 64
+    objective: binary
+    random_state: 42
+    reg_alpha: 0.0
+    reg_lambda: 0.0
+    subsample: 0.8
+    subsample_for_bin: 200000
+    subsample_freq: 0
+    verbose: -1
+
+Features Used (24):
+    age, alcohol_consumption_per_week, physical_activity_minutes_per_week, diet_score, sleep_hours_per_day, screen_time_hours_per_day, bmi, waist_to_hip_ratio, systolic_bp, diastolic_bp, heart_rate, cholesterol_total, hdl_cholesterol, ldl_cholesterol, triglycerides, gender, ethnicity, education_level, income_level, smoking_status, employment_status, family_history_diabetes, hypertension_history, cardiovascular_history
+
+Feature Importances:
+    age: 6375.0
+    alcohol_consumption_per_week: 1319.0
+    physical_activity_minutes_per_week: 13367.0
+    diet_score: 5692.0
+    sleep_hours_per_day: 4860.0
+    screen_time_hours_per_day: 6199.0
+    bmi: 7290.0
+    waist_to_hip_ratio: 3630.0
+    systolic_bp: 5515.0
+    diastolic_bp: 4599.0
+    heart_rate: 4946.0
+    cholesterol_total: 6082.0
+    hdl_cholesterol: 4700.0
+    ldl_cholesterol: 6076.0
+    triglycerides: 8591.0
+    gender: 651.0
+    ethnicity: 657.0
+    education_level: 495.0
+    income_level: 768.0
+    smoking_status: 1034.0
+    employment_status: 331.0
+    family_history_diabetes: 667.0
+    hypertension_history: 403.0
+    cardiovascular_history: 253.0
+
+ROC-AUC Score: 0.7271378268854592
+
+=== 5-Fold Cross-Validation Classification Report (Averaged) ===
+
+Class      Precision    Recall  F1-Score   Support
+--------------------------------------------------
+0.0             0.54      0.69      0.60     52738
+1.0             0.77      0.64      0.70     87261
+macro avg       0.65      0.66      0.65    140000
+weighted avg      0.68      0.66      0.66    140000
+
+=== Average Confusion Matrix (over CV folds) ===
+                   0         1
+------------------------------
+0              36296     16443
+1              31468     55793
+
+-------------------------------------------------------
+========================= EXPERIMENT LOG =========================
+Timestamp: 2025-12-04 13:34:10
+
+ROC AUC Score: 0.72714
+
+Model Parameters:
+    boosting_type: gbdt
+    class_weight: balanced
+    colsample_bytree: 0.8
+    importance_type: split
+    learning_rate: 0.03
+    max_depth: -1
+    min_child_samples: 20
+    min_child_weight: 0.001
+    min_split_gain: 0.0
+    n_estimators: 1500
+    n_jobs: -1
+    num_leaves: 64
+    objective: binary
+    random_state: 42
+    reg_alpha: 0.0
+    reg_lambda: 0.0
+    subsample: 0.8
+    subsample_for_bin: 200000
+    subsample_freq: 0
+    verbose: -1
+
+Features Used (25):
+    age, alcohol_consumption_per_week, physical_activity_minutes_per_week, diet_score, sleep_hours_per_day, screen_time_hours_per_day, bmi, waist_to_hip_ratio, systolic_bp, diastolic_bp, heart_rate, cholesterol_total, hdl_cholesterol, ldl_cholesterol, triglycerides, gender, ethnicity, education_level, income_level, smoking_status, employment_status, family_history_diabetes, hypertension_history, cardiovascular_history, bp_category
+
+Feature Importances:
+    age: 6244.0
+    alcohol_consumption_per_week: 1366.0
+    physical_activity_minutes_per_week: 13495.0
+    diet_score: 5716.0
+    sleep_hours_per_day: 4872.0
+    screen_time_hours_per_day: 6232.0
+    bmi: 7337.0
+    waist_to_hip_ratio: 3482.0
+    systolic_bp: 5483.0
+    diastolic_bp: 4431.0
+    heart_rate: 4934.0
+    cholesterol_total: 5981.0
+    hdl_cholesterol: 4867.0
+    ldl_cholesterol: 5992.0
+    triglycerides: 8354.0
+    gender: 642.0
+    ethnicity: 665.0
+    education_level: 445.0
+    income_level: 735.0
+    smoking_status: 992.0
+    employment_status: 359.0
+    family_history_diabetes: 657.0
+    hypertension_history: 417.0
+    cardiovascular_history: 254.0
+    bp_category: 548.0
+
+ROC-AUC Score: 0.7271431551786323
+
+=== 5-Fold Cross-Validation Classification Report (Averaged) ===
+
+Class      Precision    Recall  F1-Score   Support
+--------------------------------------------------
+0.0             0.54      0.69      0.60     52738
+1.0             0.77      0.64      0.70     87261
+macro avg       0.65      0.66      0.65    140000
+weighted avg      0.68      0.66      0.66    140000
+
+=== Average Confusion Matrix (over CV folds) ===
+                   0         1
+------------------------------
+0              36304     16435
+1              31449     55812
+
+Notes:
+    Added categorisation for Blood pressure
+
+-------------------------------------------------------
+========================= EXPERIMENT LOG =========================
+Timestamp: 2025-12-04 13:44:20
+
+ROC AUC Score: 0.72702
+
+Model Parameters:
+    boosting_type: gbdt
+    class_weight: balanced
+    colsample_bytree: 0.8
+    importance_type: split
+    learning_rate: 0.03
+    max_depth: -1
+    min_child_samples: 20
+    min_child_weight: 0.001
+    min_split_gain: 0.0
+    n_estimators: 1500
+    n_jobs: -1
+    num_leaves: 64
+    objective: binary
+    random_state: 42
+    reg_alpha: 0.0
+    reg_lambda: 0.0
+    subsample: 0.8
+    subsample_for_bin: 200000
+    subsample_freq: 0
+    verbose: -1
+
+Features Used (37):
+    age, alcohol_consumption_per_week, physical_activity_minutes_per_week, diet_score, sleep_hours_per_day, screen_time_hours_per_day, bmi, waist_to_hip_ratio, systolic_bp, diastolic_bp, heart_rate, cholesterol_total, hdl_cholesterol, ldl_cholesterol, triglycerides, family_history_diabetes, hypertension_history, cardiovascular_history, bp_category, gender_Male, gender_Other, ethnicity_Black, ethnicity_Hispanic, ethnicity_Other, ethnicity_White, education_level_Highschool, education_level_No formal, education_level_Postgraduate, income_level_Low, income_level_Lower-Middle, income_level_Middle, income_level_Upper-Middle, smoking_status_Former, smoking_status_Never, employment_status_Retired, employment_status_Student, employment_status_Unemployed
+
+Feature Importances:
+    age: 6099.0
+    alcohol_consumption_per_week: 1213.0
+    physical_activity_minutes_per_week: 13655.0
+    diet_score: 5587.0
+    sleep_hours_per_day: 4621.0
+    screen_time_hours_per_day: 5829.0
+    bmi: 7150.0
+    waist_to_hip_ratio: 3427.0
+    systolic_bp: 5453.0
+    diastolic_bp: 4327.0
+    heart_rate: 4873.0
+    cholesterol_total: 5752.0
+    hdl_cholesterol: 4669.0
+    ldl_cholesterol: 5724.0
+    triglycerides: 8234.0
+    family_history_diabetes: 654.0
+    hypertension_history: 409.0
+    cardiovascular_history: 261.0
+    bp_category: 473.0
+    gender_Male: 577.0
+    gender_Other: 90.0
+    ethnicity_Black: 306.0
+    ethnicity_Hispanic: 339.0
+    ethnicity_Other: 157.0
+    ethnicity_White: 521.0
+    education_level_Highschool: 541.0
+    education_level_No formal: 152.0
+    education_level_Postgraduate: 374.0
+    income_level_Low: 259.0
+    income_level_Lower-Middle: 396.0
+    income_level_Middle: 533.0
+    income_level_Upper-Middle: 375.0
+    smoking_status_Former: 285.0
+    smoking_status_Never: 487.0
+    employment_status_Retired: 347.0
+    employment_status_Student: 121.0
+    employment_status_Unemployed: 230.0
+
+ROC-AUC Score: 0.7270190613648164
+
+=== 5-Fold Cross-Validation Classification Report (Averaged) ===
+
+Class      Precision    Recall  F1-Score   Support
+--------------------------------------------------
+0.0             0.54      0.69      0.60     52738
+1.0             0.77      0.64      0.70     87261
+macro avg       0.65      0.66      0.65    140000
+weighted avg      0.68      0.66      0.66    140000
+
+=== Average Confusion Matrix (over CV folds) ===
+                   0         1
+------------------------------
+0              36313     16425
+1              31498     55764
+
+Notes:
+    OHE Encoding for CAT COLS not in BIN COLS
+
+-------------------------------------------------------
+========================= EXPERIMENT LOG =========================
+Timestamp: 2025-12-05 12:49:11
+
+ROC AUC Score: 0.72701
+
+Model Parameters:
+    boosting_type: gbdt
+    class_weight: balanced
+    colsample_bytree: 0.8
+    importance_type: split
+    learning_rate: 0.03
+    max_depth: -1
+    min_child_samples: 20
+    min_child_weight: 0.001
+    min_split_gain: 0.0
+    n_estimators: 1500
+    n_jobs: -1
+    num_leaves: 64
+    objective: binary
+    random_state: 42
+    reg_alpha: 0.0
+    reg_lambda: 0.0
+    subsample: 0.8
+    subsample_for_bin: 200000
+    subsample_freq: 0
+    verbose: -1
+
+Features Used (37):
+    age, alcohol_consumption_per_week, physical_activity_minutes_per_week, diet_score, sleep_hours_per_day, screen_time_hours_per_day, bmi, waist_to_hip_ratio, systolic_bp, diastolic_bp, heart_rate, cholesterol_total, hdl_cholesterol, ldl_cholesterol, triglycerides, family_history_diabetes, hypertension_history, cardiovascular_history, bp_category, gender_Male, gender_Other, ethnicity_Black, ethnicity_Hispanic, ethnicity_Other, ethnicity_White, education_level_Highschool, education_level_No formal, education_level_Postgraduate, income_level_Low, income_level_Lower-Middle, income_level_Middle, income_level_Upper-Middle, smoking_status_Former, smoking_status_Never, employment_status_Retired, employment_status_Student, employment_status_Unemployed
+
+Feature Importances:
+    age: 6351.0
+    alcohol_consumption_per_week: 1233.0
+    physical_activity_minutes_per_week: 13631.0
+    diet_score: 5692.0
+    sleep_hours_per_day: 4666.0
+    screen_time_hours_per_day: 5869.0
+    bmi: 7143.0
+    waist_to_hip_ratio: 3341.0
+    systolic_bp: 5417.0
+    diastolic_bp: 4286.0
+    heart_rate: 4866.0
+    cholesterol_total: 5573.0
+    hdl_cholesterol: 4658.0
+    ldl_cholesterol: 5705.0
+    triglycerides: 8209.0
+    family_history_diabetes: 627.0
+    hypertension_history: 400.0
+    cardiovascular_history: 236.0
+    bp_category: 548.0
+    gender_Male: 600.0
+    gender_Other: 82.0
+    ethnicity_Black: 307.0
+    ethnicity_Hispanic: 367.0
+    ethnicity_Other: 127.0
+    ethnicity_White: 529.0
+    education_level_Highschool: 511.0
+    education_level_No formal: 159.0
+    education_level_Postgraduate: 373.0
+    income_level_Low: 284.0
+    income_level_Lower-Middle: 373.0
+    income_level_Middle: 511.0
+    income_level_Upper-Middle: 375.0
+    smoking_status_Former: 278.0
+    smoking_status_Never: 463.0
+    employment_status_Retired: 353.0
+    employment_status_Student: 137.0
+    employment_status_Unemployed: 220.0
+
+ROC-AUC Score: 0.7270092687771501
+
+=== 5-Fold Cross-Validation Classification Report (Averaged) ===
+
+Class      Precision    Recall  F1-Score   Support
+--------------------------------------------------
+0.0             0.54      0.69      0.60     52738
+1.0             0.77      0.64      0.70     87261
+macro avg       0.65      0.66      0.65    140000
+weighted avg      0.68      0.66      0.66    140000
+
+=== Average Confusion Matrix (over CV folds) ===
+                   0         1
+------------------------------
+0              36318     16420
+1              31529     55732
+
+Notes:
+    OHE Encoding for CAT COLS not in BIN COLS and Bp modified to capture risk ordinally
+
+-------------------------------------------------------
+========================= EXPERIMENT LOG =========================
+Timestamp: 2025-12-05 12:59:59
+
+ROC AUC Score: 0.72713
+
+Model Parameters:
+    boosting_type: gbdt
+    class_weight: balanced
+    colsample_bytree: 0.8
+    importance_type: split
+    learning_rate: 0.03
+    max_depth: -1
+    min_child_samples: 20
+    min_child_weight: 0.001
+    min_split_gain: 0.0
+    n_estimators: 1500
+    n_jobs: -1
+    num_leaves: 64
+    objective: binary
+    random_state: 42
+    reg_alpha: 0.0
+    reg_lambda: 0.0
+    subsample: 0.8
+    subsample_for_bin: 200000
+    subsample_freq: 0
+    verbose: -1
+
+Features Used (25):
+    age, alcohol_consumption_per_week, physical_activity_minutes_per_week, diet_score, sleep_hours_per_day, screen_time_hours_per_day, bmi, waist_to_hip_ratio, systolic_bp, diastolic_bp, heart_rate, cholesterol_total, hdl_cholesterol, ldl_cholesterol, triglycerides, gender, ethnicity, education_level, income_level, smoking_status, employment_status, family_history_diabetes, hypertension_history, cardiovascular_history, bp_category
+
+Feature Importances:
+    age: 6201.0
+    alcohol_consumption_per_week: 1305.0
+    physical_activity_minutes_per_week: 13489.0
+    diet_score: 5722.0
+    sleep_hours_per_day: 4923.0
+    screen_time_hours_per_day: 6229.0
+    bmi: 7329.0
+    waist_to_hip_ratio: 3495.0
+    systolic_bp: 5493.0
+    diastolic_bp: 4364.0
+    heart_rate: 4891.0
+    cholesterol_total: 5942.0
+    hdl_cholesterol: 4814.0
+    ldl_cholesterol: 5999.0
+    triglycerides: 8501.0
+    gender: 623.0
+    ethnicity: 697.0
+    education_level: 463.0
+    income_level: 783.0
+    smoking_status: 1020.0
+    employment_status: 362.0
+    family_history_diabetes: 656.0
+    hypertension_history: 373.0
+    cardiovascular_history: 258.0
+    bp_category: 568.0
+
+ROC-AUC Score: 0.7271278401405911
+
+=== 5-Fold Cross-Validation Classification Report (Averaged) ===
+
+Class      Precision    Recall  F1-Score   Support
+--------------------------------------------------
+0.0             0.54      0.69      0.60     52738
+1.0             0.77      0.64      0.70     87261
+macro avg       0.65      0.66      0.65    140000
+weighted avg      0.68      0.66      0.66    140000
+
+=== Average Confusion Matrix (over CV folds) ===
+                   0         1
+------------------------------
+0              36301     16437
+1              31481     55780
+
+Notes:
+    enhanced bp without ohe
+
+-------------------------------------------------------
