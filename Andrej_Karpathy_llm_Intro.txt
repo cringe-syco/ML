@@ -1,0 +1,14 @@
+[1hr Talk] Intro to Large Language Models: https://www.youtube.com/watch?v=zjkBMFhNj_g
+The spelled-out intro to neural networks and backpropagation: building micrograd: https://www.youtube.com/watch?v=VMj-3S1tku0
+The spelled-out intro to language modeling: building makemore: https://www.youtube.com/watch?v=PaCmpygFfXo
+Building makemore Part 2: MLP: https://www.youtube.com/watch?v=TCH_1BHY58I
+Building makemore Part 3: Activations & Gradients, BatchNorm: https://www.youtube.com/watch?v=P6sfmUTpUmc
+Building makemore Part 4: Becoming a Backprop Ninja: https://www.youtube.com/watch?v=q8SA3rM6ckI
+Building makemore Part 5: Building a WaveNet: https://www.youtube.com/watch?v=t3YJ5hKiMQ0
+Let's build the GPT Tokenizer: https://www.youtube.com/watch?v=zduSFxRajkE
+Let's build GPT: from scratch, in code, spelled out.: https://www.youtube.com/watch?v=kCc8FmEb1nY
+Let's reproduce GPT-2 (124M): https://www.youtube.com/watch?v=l8pRSuU81PU
+The Mathematics Every ML Beginner Should UNDERSTAND: https://www.youtube.com/watch?v=hsW1zzQ-IRE
+But what is Simple Linear Regression? Machine Learning Algorithm Explained!: https://www.youtube.com/watch?v=AkejPwWbfGU
+Ultimate Beginner Introduction to NumPy and Matplotlib: Master Vectors, Matrices, and 3D Plots: https://www.youtube.com/watch?v=_8uFeTYjIRU
+Master NumPy Arrays: Detailed Beginner’s Guide to Indexing in 30 Minutes!: https://www.youtube.com/watch?v=oqOae3J84iM

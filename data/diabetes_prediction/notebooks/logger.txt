@@ -408,3 +408,552 @@ Notes:
     enhanced bp without ohe
 
 -------------------------------------------------------
+========================= EXPERIMENT LOG =========================
+Timestamp: 2025-12-16 11:35:18
+
+ROC AUC Score: 0.72730
+
+Model Parameters:
+    boosting_type: gbdt
+    class_weight: None
+    colsample_bytree: 0.75
+    importance_type: split
+    learning_rate: 0.015
+    max_depth: -1
+    min_child_samples: 40
+    min_child_weight: 0.001
+    min_split_gain: 0.0
+    n_estimators: 1500
+    n_jobs: None
+    num_leaves: 64
+    objective: binary
+    random_state: None
+    reg_alpha: 0.0
+    reg_lambda: 0.0
+    subsample: 0.85
+    subsample_for_bin: 200000
+    subsample_freq: 0
+    metric: auc
+    lambda_l1: 8
+    lambda_l2: 15
+    is_unbalanced: True
+    verbose: -1
+
+Features Used (32):
+    id, age, alcohol_consumption_per_week, physical_activity_minutes_per_week, diet_score, sleep_hours_per_day, screen_time_hours_per_day, bmi, waist_to_hip_ratio, systolic_bp, diastolic_bp, heart_rate, cholesterol_total, hdl_cholesterol, ldl_cholesterol, triglycerides, family_history_diabetes, hypertension_history, cardiovascular_history, pulse_pressure, blood_pressure, age_by_bmi, cholesterol_to_hdl_ratio, ldl_hdl, risk_bmi, risk_cholesterol, risk_triglycerides, risk_hypertension, risk_family, risk_smoking, risk_alcohol, risk_count
+
+Feature Importances:
+    id: 4612.0
+    age: 4795.0
+    alcohol_consumption_per_week: 846.0
+    physical_activity_minutes_per_week: 17829.0
+    diet_score: 3907.0
+    sleep_hours_per_day: 2964.0
+    screen_time_hours_per_day: 3796.0
+    bmi: 5471.0
+    waist_to_hip_ratio: 2971.0
+    systolic_bp: 3886.0
+    diastolic_bp: 2529.0
+    heart_rate: 4032.0
+    cholesterol_total: 4672.0
+    hdl_cholesterol: 2431.0
+    ldl_cholesterol: 3912.0
+    triglycerides: 8700.0
+    family_history_diabetes: 605.0
+    hypertension_history: 294.0
+    cardiovascular_history: 164.0
+    pulse_pressure: 1675.0
+    blood_pressure: 3200.0
+    age_by_bmi: 3257.0
+    cholesterol_to_hdl_ratio: 3235.0
+    ldl_hdl: 3335.0
+    risk_bmi: 54.0
+    risk_cholesterol: 17.0
+    risk_triglycerides: 37.0
+    risk_hypertension: 87.0
+    risk_family: 150.0
+    risk_smoking: 186.0
+    risk_alcohol: 0.0
+    risk_count: 851.0
+
+ROC-AUC Score: 0.7273046418460107
+
+=== 5-Fold Cross-Validation Classification Report (Averaged) ===
+
+Class      Precision    Recall  F1-Score   Support
+--------------------------------------------------
+0.0             0.62      0.43      0.51     52738
+1.0             0.71      0.84      0.77     87261
+macro avg       0.66      0.63      0.64    140000
+weighted avg      0.67      0.68      0.67    140000
+
+=== Average Confusion Matrix (over CV folds) ===
+                   0         1
+------------------------------
+0              22662     30076
+1              14039     73222
+
+Notes:
+    Till Now with Highest
+
+-------------------------------------------------------
+========================= EXPERIMENT LOG =========================
+Timestamp: 2025-12-16 11:44:13
+
+ROC AUC Score: 0.72747
+
+Model Parameters:
+    boosting_type: gbdt
+    class_weight: None
+    colsample_bytree: 0.75
+    importance_type: split
+    learning_rate: 0.015
+    max_depth: -1
+    min_child_samples: 40
+    min_child_weight: 0.001
+    min_split_gain: 0.0
+    n_estimators: 1500
+    n_jobs: None
+    num_leaves: 64
+    objective: binary
+    random_state: None
+    reg_alpha: 0.0
+    reg_lambda: 0.0
+    subsample: 0.85
+    subsample_for_bin: 200000
+    subsample_freq: 0
+    metric: auc
+    lambda_l1: 8
+    lambda_l2: 15
+    scale_pos_weight: 0.6
+    verbose: -1
+
+Features Used (32):
+    id, age, alcohol_consumption_per_week, physical_activity_minutes_per_week, diet_score, sleep_hours_per_day, screen_time_hours_per_day, bmi, waist_to_hip_ratio, systolic_bp, diastolic_bp, heart_rate, cholesterol_total, hdl_cholesterol, ldl_cholesterol, triglycerides, family_history_diabetes, hypertension_history, cardiovascular_history, pulse_pressure, blood_pressure, age_by_bmi, cholesterol_to_hdl_ratio, ldl_hdl, risk_bmi, risk_cholesterol, risk_triglycerides, risk_hypertension, risk_family, risk_smoking, risk_alcohol, risk_count
+
+Feature Importances:
+    id: 4562.0
+    age: 4787.0
+    alcohol_consumption_per_week: 844.0
+    physical_activity_minutes_per_week: 18251.0
+    diet_score: 3938.0
+    sleep_hours_per_day: 3039.0
+    screen_time_hours_per_day: 3831.0
+    bmi: 5476.0
+    waist_to_hip_ratio: 3041.0
+    systolic_bp: 3850.0
+    diastolic_bp: 2632.0
+    heart_rate: 4137.0
+    cholesterol_total: 4621.0
+    hdl_cholesterol: 2507.0
+    ldl_cholesterol: 3838.0
+    triglycerides: 8780.0
+    family_history_diabetes: 579.0
+    hypertension_history: 277.0
+    cardiovascular_history: 160.0
+    pulse_pressure: 1632.0
+    blood_pressure: 3102.0
+    age_by_bmi: 3100.0
+    cholesterol_to_hdl_ratio: 3046.0
+    ldl_hdl: 3141.0
+    risk_bmi: 57.0
+    risk_cholesterol: 17.0
+    risk_triglycerides: 44.0
+    risk_hypertension: 91.0
+    risk_family: 144.0
+    risk_smoking: 201.0
+    risk_alcohol: 0.0
+    risk_count: 775.0
+
+ROC-AUC Score: 0.727473682704412
+
+=== 5-Fold Cross-Validation Classification Report (Averaged) ===
+
+Class      Precision    Recall  F1-Score   Support
+--------------------------------------------------
+0.0             0.53      0.70      0.60     52738
+1.0             0.78      0.63      0.70     87261
+macro avg       0.65      0.66      0.65    140000
+weighted avg      0.68      0.66      0.66    140000
+
+=== Average Confusion Matrix (over CV folds) ===
+                   0         1
+------------------------------
+0              36790     15949
+1              32227     55035
+
+Notes:
+    scale_pos_weight=0.6
+
+-------------------------------------------------------
+========================= EXPERIMENT LOG =========================
+Timestamp: 2025-12-16 11:57:42
+
+ROC AUC Score: 0.72730
+
+Model Parameters:
+    boosting_type: gbdt
+    class_weight: None
+    colsample_bytree: 0.75
+    importance_type: split
+    learning_rate: 0.015
+    max_depth: -1
+    min_child_samples: 40
+    min_child_weight: 0.001
+    min_split_gain: 0.0
+    n_estimators: 1500
+    n_jobs: None
+    num_leaves: 64
+    objective: binary
+    random_state: None
+    reg_alpha: 0.0
+    reg_lambda: 0.0
+    subsample: 0.85
+    subsample_for_bin: 200000
+    subsample_freq: 0
+    metric: auc
+    lambda_l1: 8
+    lambda_l2: 15
+    scale_pos_weight: 0.6
+    verbose: -1
+
+Features Used (33):
+    id, age, alcohol_consumption_per_week, physical_activity_minutes_per_week, diet_score, sleep_hours_per_day, screen_time_hours_per_day, bmi, waist_to_hip_ratio, systolic_bp, diastolic_bp, heart_rate, cholesterol_total, hdl_cholesterol, ldl_cholesterol, triglycerides, family_history_diabetes, hypertension_history, cardiovascular_history, pulse_pressure, blood_pressure, age_by_bmi, cholesterol_to_hdl_ratio, ldl_hdl, risk_bmi, risk_cholesterol, risk_triglycerides, risk_hypertension, risk_family, risk_smoking, risk_alcohol, risk_count, daily_life_risk_index
+
+Feature Importances:
+    id: 4601.0
+    age: 4687.0
+    alcohol_consumption_per_week: 830.0
+    physical_activity_minutes_per_week: 18698.0
+    diet_score: 3208.0
+    sleep_hours_per_day: 2801.0
+    screen_time_hours_per_day: 3409.0
+    bmi: 5154.0
+    waist_to_hip_ratio: 2923.0
+    systolic_bp: 3644.0
+    diastolic_bp: 2512.0
+    heart_rate: 3731.0
+    cholesterol_total: 4412.0
+    hdl_cholesterol: 2428.0
+    ldl_cholesterol: 3805.0
+    triglycerides: 8194.0
+    family_history_diabetes: 514.0
+    hypertension_history: 271.0
+    cardiovascular_history: 151.0
+    pulse_pressure: 1682.0
+    blood_pressure: 2837.0
+    age_by_bmi: 3184.0
+    cholesterol_to_hdl_ratio: 2765.0
+    ldl_hdl: 2926.0
+    risk_bmi: 82.0
+    risk_cholesterol: 12.0
+    risk_triglycerides: 24.0
+    risk_hypertension: 95.0
+    risk_family: 130.0
+    risk_smoking: 234.0
+    risk_alcohol: 0.0
+    risk_count: 754.0
+    daily_life_risk_index: 3802.0
+
+ROC-AUC Score: 0.7272968623464112
+
+=== 5-Fold Cross-Validation Classification Report (Averaged) ===
+
+Class      Precision    Recall  F1-Score   Support
+--------------------------------------------------
+0.0             0.53      0.70      0.60     52738
+1.0             0.78      0.63      0.70     87261
+macro avg       0.65      0.66      0.65    140000
+weighted avg      0.68      0.66      0.66    140000
+
+=== Average Confusion Matrix (over CV folds) ===
+                   0         1
+------------------------------
+0              36810     15928
+1              32287     54974
+
+Notes:
+    after scale_pos_weight added risk feature
+
+-------------------------------------------------------
+========================= EXPERIMENT LOG =========================
+Timestamp: 2025-12-16 12:55:48
+
+ROC AUC Score: 0.72725
+
+Model Parameters:
+    boosting_type: gbdt
+    class_weight: None
+    colsample_bytree: 0.75
+    importance_type: split
+    learning_rate: 0.015
+    max_depth: -1
+    min_child_samples: 40
+    min_child_weight: 0.001
+    min_split_gain: 0.0
+    n_estimators: 1500
+    n_jobs: None
+    num_leaves: 64
+    objective: binary
+    random_state: None
+    reg_alpha: 0.0
+    reg_lambda: 0.0
+    subsample: 0.85
+    subsample_for_bin: 200000
+    subsample_freq: 0
+    metric: auc
+    lambda_l1: 8
+    lambda_l2: 15
+    scale_pos_weight: 0.6
+    verbose: -1
+
+Features Used (34):
+    id, age, alcohol_consumption_per_week, physical_activity_minutes_per_week, diet_score, sleep_hours_per_day, screen_time_hours_per_day, bmi, waist_to_hip_ratio, systolic_bp, diastolic_bp, heart_rate, cholesterol_total, hdl_cholesterol, ldl_cholesterol, triglycerides, family_history_diabetes, hypertension_history, cardiovascular_history, pulse_pressure, blood_pressure, age_by_bmi, cholesterol_to_hdl_ratio, ldl_hdl, risk_bmi, risk_cholesterol, risk_triglycerides, risk_hypertension, risk_family, risk_smoking, risk_alcohol, bmi_age_eth, risk_count, daily_life_risk_index
+
+Feature Importances:
+    id: 4514.0
+    age: 3559.0
+    alcohol_consumption_per_week: 830.0
+    physical_activity_minutes_per_week: 18301.0
+    diet_score: 3202.0
+    sleep_hours_per_day: 2636.0
+    screen_time_hours_per_day: 3386.0
+    bmi: 4511.0
+    waist_to_hip_ratio: 2834.0
+    systolic_bp: 3493.0
+    diastolic_bp: 2479.0
+    heart_rate: 3785.0
+    cholesterol_total: 4270.0
+    hdl_cholesterol: 2348.0
+    ldl_cholesterol: 3629.0
+    triglycerides: 8367.0
+    family_history_diabetes: 445.0
+    hypertension_history: 244.0
+    cardiovascular_history: 151.0
+    pulse_pressure: 1600.0
+    blood_pressure: 2659.0
+    age_by_bmi: 2932.0
+    cholesterol_to_hdl_ratio: 2765.0
+    ldl_hdl: 3010.0
+    risk_bmi: 32.0
+    risk_cholesterol: 9.0
+    risk_triglycerides: 20.0
+    risk_hypertension: 92.0
+    risk_family: 107.0
+    risk_smoking: 165.0
+    risk_alcohol: 0.0
+    bmi_age_eth: 3793.0
+    risk_count: 640.0
+    daily_life_risk_index: 3692.0
+
+ROC-AUC Score: 0.7272511145793765
+
+=== 5-Fold Cross-Validation Classification Report (Averaged) ===
+
+Class      Precision    Recall  F1-Score   Support
+--------------------------------------------------
+0.0             0.53      0.70      0.60     52738
+1.0             0.78      0.63      0.70     87261
+macro avg       0.65      0.66      0.65    140000
+weighted avg      0.68      0.66      0.66    140000
+
+=== Average Confusion Matrix (over CV folds) ===
+                   0         1
+------------------------------
+0              36802     15936
+1              32239     55023
+
+Notes:
+    after scale_pos_weight added risk feature
+
+-------------------------------------------------------
+========================= EXPERIMENT LOG =========================
+Timestamp: 2025-12-17 10:06:37
+
+ROC AUC Score: 0.72736
+
+Model Parameters:
+    boosting_type: gbdt
+    class_weight: None
+    colsample_bytree: 0.75
+    importance_type: split
+    learning_rate: 0.015
+    max_depth: -1
+    min_child_samples: 40
+    min_child_weight: 0.001
+    min_split_gain: 0.0
+    n_estimators: 1500
+    n_jobs: None
+    num_leaves: 64
+    objective: binary
+    random_state: None
+    reg_alpha: 0.0
+    reg_lambda: 0.0
+    subsample: 0.85
+    subsample_for_bin: 200000
+    subsample_freq: 0
+    metric: auc
+    lambda_l1: 8
+    lambda_l2: 15
+    scale_pos_weight: 0.6
+    verbose: -1
+
+Features Used (35):
+    id, age, alcohol_consumption_per_week, physical_activity_minutes_per_week, diet_score, sleep_hours_per_day, screen_time_hours_per_day, bmi, waist_to_hip_ratio, systolic_bp, diastolic_bp, heart_rate, cholesterol_total, hdl_cholesterol, ldl_cholesterol, triglycerides, family_history_diabetes, hypertension_history, cardiovascular_history, pulse_pressure, blood_pressure, age_by_bmi, cholesterol_to_hdl_ratio, ldl_hdl, bp_category, bmi_category, risk_bmi, risk_cholesterol, risk_triglycerides, risk_hypertension, risk_family, risk_smoking, risk_alcohol, risk_count, daily_life_risk_index
+
+Feature Importances:
+    id: 4666.0
+    age: 4629.0
+    alcohol_consumption_per_week: 884.0
+    physical_activity_minutes_per_week: 18834.0
+    diet_score: 3252.0
+    sleep_hours_per_day: 2688.0
+    screen_time_hours_per_day: 3239.0
+    bmi: 5007.0
+    waist_to_hip_ratio: 2936.0
+    systolic_bp: 3623.0
+    diastolic_bp: 2566.0
+    heart_rate: 3569.0
+    cholesterol_total: 4479.0
+    hdl_cholesterol: 2404.0
+    ldl_cholesterol: 3703.0
+    triglycerides: 8109.0
+    family_history_diabetes: 463.0
+    hypertension_history: 262.0
+    cardiovascular_history: 141.0
+    pulse_pressure: 1554.0
+    blood_pressure: 2894.0
+    age_by_bmi: 3296.0
+    cholesterol_to_hdl_ratio: 2765.0
+    ldl_hdl: 2921.0
+    bp_category: 391.0
+    bmi_category: 190.0
+    risk_bmi: 67.0
+    risk_cholesterol: 10.0
+    risk_triglycerides: 23.0
+    risk_hypertension: 70.0
+    risk_family: 133.0
+    risk_smoking: 194.0
+    risk_alcohol: 0.0
+    risk_count: 724.0
+    daily_life_risk_index: 3814.0
+
+ROC-AUC Score: 0.7273595391212552
+
+=== 5-Fold Cross-Validation Classification Report (Averaged) ===
+
+Class      Precision    Recall  F1-Score   Support
+--------------------------------------------------
+0.0             0.53      0.70      0.60     52738
+1.0             0.78      0.63      0.70     87261
+macro avg       0.65      0.66      0.65    140000
+weighted avg      0.68      0.66      0.66    140000
+
+=== Average Confusion Matrix (over CV folds) ===
+                   0         1
+------------------------------
+0              36812     15927
+1              32259     55002
+
+Notes:
+    risk of daily of added
+
+-------------------------------------------------------
+========================= EXPERIMENT LOG =========================
+Timestamp: 2025-12-17 10:28:51
+
+ROC AUC Score: 0.72727
+
+Model Parameters:
+    boosting_type: gbdt
+    class_weight: None
+    colsample_bytree: 0.75
+    importance_type: split
+    learning_rate: 0.015
+    max_depth: -1
+    min_child_samples: 40
+    min_child_weight: 0.001
+    min_split_gain: 0.0
+    n_estimators: 1500
+    n_jobs: None
+    num_leaves: 64
+    objective: binary
+    random_state: None
+    reg_alpha: 0.0
+    reg_lambda: 0.0
+    subsample: 0.85
+    subsample_for_bin: 200000
+    subsample_freq: 0
+    metric: auc
+    lambda_l1: 8
+    lambda_l2: 15
+    scale_pos_weight: 0.6
+    verbose: -1
+
+Features Used (41):
+    id, age, alcohol_consumption_per_week, physical_activity_minutes_per_week, diet_score, sleep_hours_per_day, screen_time_hours_per_day, bmi, waist_to_hip_ratio, systolic_bp, diastolic_bp, heart_rate, cholesterol_total, hdl_cholesterol, ldl_cholesterol, triglycerides, gender, ethnicity, education_level, income_level, smoking_status, employment_status, family_history_diabetes, hypertension_history, cardiovascular_history, pulse_pressure, blood_pressure, age_by_bmi, cholesterol_to_hdl_ratio, ldl_hdl, bp_category, bmi_category, risk_bmi, risk_cholesterol, risk_triglycerides, risk_hypertension, risk_family, risk_smoking, risk_alcohol, risk_count, daily_life_risk_index
+
+Feature Importances:
+    id: 4301.0
+    age: 4294.0
+    alcohol_consumption_per_week: 784.0
+    physical_activity_minutes_per_week: 17652.0
+    diet_score: 3023.0
+    sleep_hours_per_day: 2650.0
+    screen_time_hours_per_day: 3218.0
+    bmi: 4700.0
+    waist_to_hip_ratio: 2783.0
+    systolic_bp: 3489.0
+    diastolic_bp: 2292.0
+    heart_rate: 3566.0
+    cholesterol_total: 4335.0
+    hdl_cholesterol: 2188.0
+    ldl_cholesterol: 3656.0
+    triglycerides: 8073.0
+    gender: 168.0
+    ethnicity: 1188.0
+    education_level: 815.0
+    income_level: 1446.0
+    smoking_status: 556.0
+    employment_status: 581.0
+    family_history_diabetes: 521.0
+    hypertension_history: 275.0
+    cardiovascular_history: 144.0
+    pulse_pressure: 1512.0
+    blood_pressure: 2545.0
+    age_by_bmi: 3013.0
+    cholesterol_to_hdl_ratio: 2673.0
+    ldl_hdl: 2827.0
+    bp_category: 372.0
+    bmi_category: 160.0
+    risk_bmi: 41.0
+    risk_cholesterol: 8.0
+    risk_triglycerides: 29.0
+    risk_hypertension: 72.0
+    risk_family: 128.0
+    risk_smoking: 36.0
+    risk_alcohol: 0.0
+    risk_count: 703.0
+    daily_life_risk_index: 3683.0
+
+ROC-AUC Score: 0.727269348772427
+
+=== 5-Fold Cross-Validation Classification Report (Averaged) ===
+
+Class      Precision    Recall  F1-Score   Support
+--------------------------------------------------
+0.0             0.53      0.70      0.60     52738
+1.0             0.78      0.63      0.69     87261
+macro avg       0.65      0.66      0.65    140000
+weighted avg      0.68      0.66      0.66    140000
+
+=== Average Confusion Matrix (over CV folds) ===
+                   0         1
+------------------------------
+0              36820     15919
+1              32327     54935
+
+Notes:
+    added cat cols back
+
+-------------------------------------------------------
