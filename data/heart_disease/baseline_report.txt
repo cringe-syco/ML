@@ -1,0 +1,73 @@
+#               precision    recall  f1-score   support
+
+#            0       0.90      0.90      0.90     69509
+#            1       0.88      0.87      0.88     56491
+
+#     accuracy                           0.89    126000
+#    macro avg       0.89      0.89      0.89    126000
+# weighted avg       0.89      0.89      0.89    126000
+
+# Fold 1 done with ROC-AUC: 0.955548222586477
+#               precision    recall  f1-score   support
+
+#            0       0.89      0.91      0.90     69509
+#            1       0.88      0.87      0.87     56491
+
+#     accuracy                           0.89    126000
+#    macro avg       0.89      0.89      0.89    126000
+# weighted avg       0.89      0.89      0.89    126000
+
+# Fold 2 done with ROC-AUC: 0.9545607642271182
+#               precision    recall  f1-score   support
+
+#            0       0.89      0.91      0.90     69509
+#            1       0.88      0.87      0.88     56491
+
+#     accuracy                           0.89    126000
+#    macro avg       0.89      0.89      0.89    126000
+# weighted avg       0.89      0.89      0.89    126000
+
+# Fold 3 done with ROC-AUC: 0.9553328255739608
+#               precision    recall  f1-score   support
+
+#            0       0.89      0.91      0.90     69509
+#            1       0.88      0.87      0.87     56491
+
+#     accuracy                           0.89    126000
+#    macro avg       0.89      0.89      0.89    126000
+# weighted avg       0.89      0.89      0.89    126000
+
+# Fold 4 done with ROC-AUC: 0.9548917821824026
+#               precision    recall  f1-score   support
+
+#            0       0.89      0.91      0.90     69510
+#            1       0.88      0.87      0.88     56490
+
+#     accuracy                           0.89    126000
+#    macro avg       0.89      0.89      0.89    126000
+# weighted avg       0.89      0.89      0.89    126000
+
+# Fold 5 done with ROC-AUC: 0.9557331318215955
+
+# CV Results (mean ± std):
+# ACCURACY  : 0.8885 ± 0.0009
+# ROC_AUC   : 0.9552 ± 0.0004
+# PRECISION : 0.8818 ± 0.0006
+# RECALL    : 0.8676 ± 0.0020
+# F1        : 0.8746 ± 0.0012
+
+# Average feature importances:
+# Max HR                     9480.0
+# Cholesterol                6978.0
+# Age                        5475.4
+# BP                         3936.0
+# ST depression              3456.4
+# Number of vessels fluro    1808.0
+# Chest pain type            1704.4
+# Sex                        1115.0
+# Exercise angina            1029.4
+# Slope of ST                 884.0
+# Thallium                    859.4
+# EKG results                 669.0
+# FBS over 120                205.0
+# dtype: float64
