@@ -1,0 +1,14 @@
+[project]
+name = "project1"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "aiosqlite>=0.22.1",
+    "fastapi>=0.115.14",
+    "fastapi-users[sqlalchemy]>=15.0.3",
+    "imagekitio>=5.2.0",
+    "python-dotenv>=1.2.1",
+    "uvicorn[standard]>=0.35.0",
+]

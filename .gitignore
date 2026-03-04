@@ -5,3 +5,5 @@ __pycache__/
 *catboost_info/
 */onnx_minilm*
 *mlflow.db
+*.env
+*.log

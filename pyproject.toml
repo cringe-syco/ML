@@ -154,4 +154,5 @@ dependencies = [
 [tool.uv.workspace]
 members = [
     "tictactoe",
+    "fastapi/project1",
 ]
