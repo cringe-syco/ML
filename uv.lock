@@ -1024,6 +1024,19 @@ wheels = [
 ]
 
 [[package]]
+name = "httpx-aiohttp"
+version = "0.1.12"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "aiohttp" },
+    { name = "httpx" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/63/2c/b894861cecf030fb45675ea24aa55b5722e97c602a163d872fca66c5a6d8/httpx_aiohttp-0.1.12.tar.gz", hash = "sha256:81feec51fd82c0ecfa0e9aaf1b1a6c2591260d5e2bcbeb7eb0277a78e610df2c", size = 275945, upload-time = "2025-12-12T10:12:15.283Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/16/8d/85c9701e9af72ca132a1783e2a54364a90c6da832304416a30fc11196ab2/httpx_aiohttp-0.1.12-py3-none-any.whl", hash = "sha256:5b0eac39a7f360fa7867a60bcb46bb1024eada9c01cbfecdb54dc1edb3fb7141", size = 6367, upload-time = "2025-12-12T10:12:14.018Z" },
+]
+
+[[package]]
 name = "idna"
 version = "3.10"
 source = { registry = "https://pypi.org/simple" }
@@ -1074,6 +1087,12 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/eb/5a/ef9d5c7f9ed262e10077dacb0d9fbad151ae31d762eb2060108f219ee620/imagekitio-5.2.0.tar.gz", hash = "sha256:2ac32771505ea39851f3622959ebe229a56282989d3762b5186eab80cc3c789c", size = 234547, upload-time = "2026-02-02T05:28:21.755Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/1d/22/5a07dabe4d51fe2e8a6f53b9b40d607887177a7898f63ddf2089b1f9b3bc/imagekitio-5.2.0-py3-none-any.whl", hash = "sha256:d2a1f9661923da0761195e578347e5359269695ec3d926d6d58f6ae33b4cbc4e", size = 263095, upload-time = "2026-02-02T05:28:18.628Z" },
+]
+
+[package.optional-dependencies]
+aiohttp = [
+    { name = "aiohttp" },
+    { name = "httpx-aiohttp" },
 ]
 
 [[package]]
@@ -2186,7 +2205,7 @@ dependencies = [
     { name = "aiosqlite" },
     { name = "fastapi" },
     { name = "fastapi-users", extra = ["sqlalchemy"] },
-    { name = "imagekitio" },
+    { name = "imagekitio", extra = ["aiohttp"] },
     { name = "python-dotenv" },
     { name = "uvicorn", extra = ["standard"] },
 ]
@@ -2196,7 +2215,7 @@ requires-dist = [
     { name = "aiosqlite", specifier = ">=0.22.1" },
     { name = "fastapi", specifier = ">=0.115.14" },
     { name = "fastapi-users", extras = ["sqlalchemy"], specifier = ">=15.0.3" },
-    { name = "imagekitio", specifier = ">=5.2.0" },
+    { name = "imagekitio", extras = ["aiohttp"], specifier = ">=5.2.0" },
     { name = "python-dotenv", specifier = ">=1.2.1" },
     { name = "uvicorn", extras = ["standard"], specifier = ">=0.35.0" },
 ]

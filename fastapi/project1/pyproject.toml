@@ -8,7 +8,7 @@ dependencies = [
     "aiosqlite>=0.22.1",
     "fastapi>=0.115.14",
     "fastapi-users[sqlalchemy]>=15.0.3",
-    "imagekitio>=5.2.0",
+    "imagekitio[aiohttp]>=5.2.0",
     "python-dotenv>=1.2.1",
     "uvicorn[standard]>=0.35.0",
 ]
