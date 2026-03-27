@@ -12,6 +12,7 @@ from pathlib import Path
 from time import time
 from sentence_transformers import SentenceTransformer
 import psutil
+import pandas as pd
 
 # === OPTIMIZATION 1: CPU AFFINITY + NUMA AWARENESS ===
 def configure_cpu_affinity():
@@ -27,7 +28,7 @@ def create_compiled_encoder(model_path):
     model = SentenceTransformer(str(model_path))
     
     # Enable PyTorch optimizations
-    torch.set_float32_matmul_precision('high')
+    # torch.set_float32_matmul_precision('high')
     
     # Try torch.compile if available (PyTorch 2.0+)
     try:
@@ -81,14 +82,10 @@ class MemoryPoolEncoder:
 
 # === BENCHMARK FUNCTIONS ===
 def get_sample_data(n=100000):
-    texts = [
-        "The system processes user authentication requests securely.",
-        "Machine learning models are trained on large datasets.",
-        "Cloud computing enables scalable infrastructure.",
-        "Data science explores patterns in datasets.",
-        "Embeddings represent text as vectors in semantic space.",
-    ]
-    return (texts * (n // len(texts) + 1))[:n]
+    DATA_PATH = r"D:\Dsoft\Projects\ML\notebooks\ultrachat_200k_sft.parquet"
+    df = pd.read_parquet(DATA_PATH, engine='fastparquet', columns=["prompt"])
+    return df["prompt"].values[:n].tolist()
+
 
 async def benchmark_baseline(model_path):
     """Original async approach (baseline)."""
@@ -179,7 +176,7 @@ async def benchmark_cpu_affinity(model_path):
     return elapsed, embeddings
 
 async def main():
-    model_path = Path(__file__).parent / "model_files"
+    model_path = r"D:\Dsoft\Projects\ML\notebooks\model_files"
     
     print("=" * 70)
     print("ULTRA-OPTIMIZATION COMPARISON: Multiple Strategies")
