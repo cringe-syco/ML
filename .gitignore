@@ -10,3 +10,4 @@ __pycache__/
 model_files
 personalstuff
 mlartifacts
+mlruns
